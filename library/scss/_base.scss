@@ -20,8 +20,8 @@ html, body {
 
 @media only screen and (min-width: $tablet) {
 
-	// Grid 
-	
+	// Grid
+
 	.onecol    { width: 5.801104972%;  }       /* 4.85%;  } /* grid_1  */
 	.twocol    { width: 14.364640883%; }       /* 13.45%; } /* grid_2  */
 	.threecol  { width: 22.928176794%; }       /* 22.05%; } /* grid_3  */
@@ -34,18 +34,18 @@ html, body {
 	.tencol    { width: 82.87292817100001%; }  /* 82.7%;  } /* grid_10 */
 	.elevencol { width: 91.436464082%; }       /* 91.35%; } /* grid_11 */
 	.twelvecol { width: 99.999999993%; }       /* 100%;   } /* grid_12 */
-	
+
 	// layout & column defaults
 	.onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol {
 	  position: relative;
 	  float: left;
 	  margin-left: 2.762430939%;
 	}
-	
+
 	.first {
 	  margin-left: 0;
 	}
-	
+
 	.last {
 	  float: right;
 	}
@@ -57,48 +57,6 @@ img {
 	display: block;
 }
 
-
-/********************
-WORDPRESS BODY CLASSES
-style a page via class
-********************/
-
-.rtl {}                           /* for sites that are read right to left (i.e. hebrew) */
-.home {}                          /* home page */
-.blog {}                          /* blog template page */
-.archive {}                       /* archive page */
-.date {}                          /* date archive page */
-	.date-paged-1 {}                /* replace the number to the corresponding page number */
-.search {}                        /* search page */
-	.search-results {}              /* search result page */
-	.search-no-results {}           /* no results search page */
-	.search-paged-1 {}              /* individual paged search (i.e. body.search-paged-3) */
-.error404 {}                      /* 404 page */
-.single {}                        /* single post page */
-	.postid-1 {}                    /* individual post page by id (i.e. body.postid-73) */
-	.single-paged-1 {}              /* individual paged single (i.e. body.single-paged-3) */
-.attachment {}                    /* attatchment page */
-	.attachmentid-1 {}              /* individual attatchment page (i.e. body.attachmentid-763) */
-	.attachment-mime-type {}        /* style mime type pages */
-.author {}                        /* author page */
-	.author-nicename {}             /* user nicename (i.e. body.author-samueladams) */
-	.author-paged-1 {}              /* paged author archives (i.e. body.author-paged-4) for page 4 */
-.category {}                      /* category page */
-	.category-1 {}                  /* individual category page (i.e. body.category-6) */
-	.category-paged-1 {}            /* replace the number to the corresponding page number */
-.tag {}                           /* tag page */
-	.tag-slug {}                    /* individual tag page (i.e. body.tag-news) */
-	.tag-paged-1 {}                 /* replace the number to the corresponding page number */
-.page-template {}                 /* custom page template page */
-	.page-template-page-php {}      /* individual page template (i.e. body.page-template-contact-php */
-	.page-paged-1 {}                /* replace the number to the corresponding page number */
-	.page-parent {}                 /* parent page template */
-	.page-child {}                  /* child page template */
-	.parent-pageid-1 {}             /* replace the number to the corresponding page number */
-.logged-in {}                     /* if user is logged in */
-.paged {}                         /* paged items like search results or archives */
-	.paged-1 {}                     /* individual paged (i.e. body.paged-3) */
-
 /*********************
 LAYOUT & GRID STYLES
 *********************/
@@ -106,11 +64,11 @@ LAYOUT & GRID STYLES
 .wrap {
 	margin: 0 auto;
 	width: 96%;
-	
+
 	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
 		max-width: 960px;
 		}// * BP
-	
+
 	}// wrap
 #container {
 	height: 100%;
@@ -252,7 +210,7 @@ POSTS & CONTENT STYLES
 
 		.page-title {}
 
-		.archive-title { 
+		.archive-title {
 			margin-bottom: $margin;
 			}
 
@@ -333,32 +291,32 @@ POSTS & CONTENT STYLES
 			but it's up to you. Feel free to change it up.
 			*/
 			.alignleft, img.alignleft {
-				  
+
 				 @include breakpoint(25em, $no-query: '.no-mediaqueries') {
-				 		margin-right: $margin; 
-						display: inline; 
-						float: left; 
+				 		margin-right: $margin;
+						display: inline;
+						float: left;
 				  	}
 
 				}
 			.alignright, img.alignright {
-				
+
 				@include breakpoint(25em, $no-query: '.no-mediaqueries') {
-					margin-left: $margin; 
-					display: inline; 
-					float: right; 			
+					margin-left: $margin;
+					display: inline;
+					float: right;
 					}
 				}
-		
+
 			.aligncenter, img.aligncenter {
-				
+
 				@include breakpoint(25em, $no-query: '.no-mediaqueries') {
-					margin-right: auto; 
-					margin-left: auto; 
-					display: block; 
-					clear: both; 
+					margin-right: auto;
+					margin-left: auto;
+					display: block;
+					clear: both;
 					}
-			
+
 				}
 
 			video, object {
@@ -424,11 +382,11 @@ POSTS & CONTENT STYLES
 .tout {
 	background: #f1f1f1;
 	padding: $marginhalf;
-	
+
 	h2 {
 		margin-top: $marginquarter;
 		}
-	
+
 	}
 
 
@@ -469,7 +427,7 @@ PAGE NAVI STYLES
                 	font-weight: bold;
                 }
                 a:hover, a:focus {
-                    
+
                 }
             }
         }
@@ -805,7 +763,7 @@ https://github.com/wesleytodd/LeSlide
 	transition: all 0.3s ease-out;
 	}
 */
-	
+
 [placeholder] {
 	color: $black;
 	}
@@ -828,19 +786,19 @@ https://github.com/wesleytodd/LeSlide
 	color: $black;
 	}
 
-:-ms-input-placeholder {  
+:-ms-input-placeholder {
 	@include rem-fallback(font-size, 1);
 	//text-transform: uppercase;
 	color: $black;
 	}
 
 [placeholder]:focus::-webkit-input-placeholder {
-  transition: opacity 0.1s 0.1s ease-in-out; 
+  transition: opacity 0.1s 0.1s ease-in-out;
   opacity: 0;
 }
 
 .name-form:focus::-webkit-input-placeholder {
-  transition: text-indent 0.1s 0.1s ease-in-out; 
+  transition: text-indent 0.1s 0.1s ease-in-out;
   text-indent: -100%;
   opacity: 1;
 }

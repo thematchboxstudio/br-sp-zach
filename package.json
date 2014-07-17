@@ -14,6 +14,6 @@
     "grunt-contrib-cssmin": "*",
     "grunt-combine-media-queries": "*",
     "grunt-contrib-copy": "*",
-    "grunt-dr-svg-sprites": "*"
+    "grunt-processhtml": "^0.3.3"
   }
 }

@@ -14,7 +14,7 @@ TOOLS
 *********************/
 
 // BORDER-BOX ALL THE THINGS! (http://paulirish.com/2012/box-sizing-border-box-ftw/)
-* { 
+* {
 	box-sizing: border-box;
 }
 
@@ -85,7 +85,7 @@ $desktop: 71em;
 TYPOGRAPHY
 *********************/
 
-$sans-serif:        "Helvetica Neue", Helvetica, Arial, sans-serif;
+$sans-serif:        'Gotham A', 'Gotham B', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $serif:             "Georgia", Cambria, Times New Roman, Times, serif;
 
 
@@ -110,7 +110,7 @@ REM FALLBACK
     @if $i < $max {
       $pxValues: #{$pxValues + " "};
     }
-  } 
+  }
 
   @for $i from 1 through $max {
     $value: strip-unit(nth($values, $i));
@@ -119,10 +119,10 @@ REM FALLBACK
     @if $i < $max {
       $remValues: #{$remValues + " "};
     }
-  } 
-  
-  #{$property}: $pxValues; 
-  #{$property}: $remValues; 
+  }
+
+  #{$property}: $pxValues;
+  #{$property}: $remValues;
 }
 
 
@@ -195,22 +195,22 @@ USAGE: @include transition(all 0.2s ease-in-out);
 @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
- 
+
 .fade-in {
     opacity:0;  /* make things invisible upon start */
     -webkit-animation:fadeIn ease-out 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
     -moz-animation:fadeIn ease-out 1;
     animation:fadeIn ease-out 1;
- 
+
     -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
     -moz-animation-fill-mode:forwards;
     animation-fill-mode:forwards;
- 
+
     -webkit-animation-duration:.6s;
     -moz-animation-duration:.6s;
     animation-duration:.6s;
 }
- 
+
 .fade-in {
 -webkit-animation-delay: .35s;
 -moz-animation-delay: .35s;
