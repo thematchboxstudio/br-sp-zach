@@ -1,0 +1,400 @@
+/*********************
+NAVIGATION STYLES
+*********************/
+
+/////////////////////////////////////// MOBILE NAV STUFF
+
+// #oc-wrap {
+// 	background: $white;
+// 	min-height: 100%;
+// 	width: 100%;
+// 	position: relative;
+// 	z-index: 1;
+// 	transform: translate3d(0, 0, 0);
+// 	float: right;
+// 	display: block;
+// 	@include hovers(.75s, ease-in-out);
+// 	.active-nav & {
+// 		overflow: hidden;
+// 		transform: translate3d(70%, 0, 0);
+// 		@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+// 			transform: translate3d(0, 0, 0);
+// 		}// * BP //++++++++++++++++++++++++++++++++++++++++++++++++/
+// 	}// active-nav &
+
+// 	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+// 		//padding-top: $margin;
+// 		}// * BP //++++++++++++++++++++++++++++++++++++++++++++++++/
+
+// }// oc-wrap
+
+$larger: 40%;
+$smaller: (100% - $larger) / 2;
+
+a.menu-trigger {
+	height: 50%;
+	display: block;
+	width: $smaller;
+	color: $black;
+	@include rem-fallback(font-size, .85);
+	text-transform: uppercase;
+	text-align: center;
+	top: 1em;
+	left: 0;
+	position: relative;
+	z-index:10;
+	float: left;
+	text-decoration: none;
+	line-height: 1;
+	font-weight: 500;
+	padding-top: 19px;
+	top: 10px;
+		&:hover, &:active, &:focus {
+			color: $black;
+			}
+	
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') { display: none; }
+	
+}// menu-trigger
+
+
+.logo-link {
+	background: $black;
+	padding: $margin;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 83%;
+	max-width: 177px;
+	min-height: 75px;
+	display: block;
+	width: $larger;
+	position: absolute;
+	left: 0;
+	right: 0;
+	float: left;
+	margin: 0 auto;
+	@extend .image-replacement;
+	
+	@include breakpoint($phone-landscape) {
+		max-width: 220px;
+		min-height: 93px;
+		}// * BP
+		
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+		margin-top: -$margin;
+		padding: 0 0 4%;
+		float: none;
+		max-width: none;
+		background: transparent;
+		background-size: auto, 100%;
+		background-repeat: no-repeat;
+		background-position: center center, 0 0;
+		background-color: transparent;
+		position: relative;
+		width: 304px;
+		height: 162px;
+			&:hover {
+				}
+
+			img { display: none; }
+
+
+		}// * BP //++++++++++++++++++++++++++++++++++++++++++++++++/
+		
+		img { margin: 0 auto; }
+		
+		
+	.no-multiplebgs & {
+		}
+
+	}// logo-link
+
+
+//// SIDE NAV
+
+
+#side {
+	overflow: auto;
+	display: block;
+	position: absolute;
+	z-index: 2;
+	width: 70%;
+	transform: translate3d(-100%, 0, 0);
+	float: left;
+	min-height: 100%;
+	@include hovers(.75s, ease-in-out);
+
+	.nav {
+		width: 100%;
+		li {
+			width: 100%;
+			display: block;
+			text-align: left;
+		
+			&.current-menu-item a, 
+			&.current_page_item a,
+			&.current-page-ancestor a {
+				background: lighten($black, 5%);
+				}
+			
+			a {
+				text-transform: uppercase;
+				@include rem-fallback(font-size, 1);
+				margin: 0;
+				padding: $margin;
+				border-top: 1px solid $accent;
+				background: $white;
+				text-transform: uppercase;
+				letter-spacing: .25em;
+				text-shadow: 1px 1px 4px transparentize(lighten($black, 40%), .9);				
+				 &:focus {
+						background: lighten($black, 5%);
+						color: $white;
+						}
+				}
+			
+			&:last-child a {
+				border-top: none;
+				}
+		
+		}// li
+		
+		.sub-menu {
+			position: relative;
+			
+			.current-menu-item > a {
+				color: $black;
+				}
+			a:hover {
+				color: $black;
+				}
+			.current-menu-parent > a {
+				color: $black;
+				}	
+			li a:before {
+				content: "";
+				}
+			.sub-menu li a {
+				@include rem-fallback(font-size, 1);
+					&:before {
+					content: "- ";
+					}// before
+				}
+			
+		}// sub-menu
+		
+		
+	}//.nav
+
+
+	.login a:hover {
+	color: $black;
+	}
+
+	// Custom Scrollbar for the sidebar (webkit only) from http://css-tricks.com/examples/WebKitScrollbars/
+	&::-webkit-scrollbar {
+	    width: 6px;
+	}
+	 
+	/* Track */
+	&::-webkit-scrollbar-track {
+	   background: $accent;
+		}
+	 
+	/* Handle */
+	&::-webkit-scrollbar-thumb {
+	  -webkit-border-radius: 10px;
+	  border-radius: 10px;
+	  background: $black; 
+		}
+	&::-webkit-scrollbar-thumb:window-inactive {
+		}
+
+	.no-csstransforms3d.no-csstransitions & {
+		margin-left: -100%;
+		}
+	.no-csstransforms3d.no-csstransitions .active-nav & {
+		margin-left: 0;
+		}
+
+}// #side
+
+
+.active-nav #side {
+	transform: translate3d(0, 0, 0);
+	box-shadow: 2px 0 25px 15px rgba(0, 0, 0, 0.2);
+		@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+			box-shadow: none;
+			transform: translate3d(-100%, 0, 0);
+			}// BP
+
+	.nav li ul.sub-menu, .nav li ul.children {
+		padding: 0 0 0 .85em;
+		li:first-child {
+			display: none;
+			}// first-child
+	}// sub-menu, .children
+
+}// active-nav #side
+
+
+
+/////////////////////////////////////// END MOBILE NAV STUFF
+
+
+/*
+all navs have a .nav class applied via
+the wp_menu function; this is so we can
+easily write one group of styles for
+the navs on the site so our css is cleaner
+and more scalable.
+*/
+
+nav[role="navigation"] {
+	display: none;
+
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+		display: block;
+		}// * BP
+	
+	}
+
+.nav {
+	border-bottom: 0;
+	margin: 0;
+	
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+		background: #eee;
+		border: 0;
+		}// * BP
+	
+	ul {
+		@extend .clearfix;
+		margin: 0;
+		}
+	
+	li {
+	
+		@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+			float: left;
+			position: relative;
+			}// * BP
+
+		a {
+			display: block;
+			text-decoration: none;
+			padding: 10px 10px;
+			background-color: #eee;
+			border-bottom: 1px solid #ccc;
+			
+				@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+					border-bottom: 0;
+					}// * BP
+
+			/*
+			remember this is for mobile ONLY, so there's no need
+			to even declare hover styles here, you can do it in
+			the style.scss file where it's relevant. We want to
+			keep this file as small as possible!
+			*/
+			&:hover, &:focus {
+			
+				@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+					background-color: #dedede;
+					}// * BP
+			
+			}
+		}
+
+		&:first-child {}
+
+		&:last-child {}
+
+		/*
+		so you really have to rethink your dropdowns for mobile.
+		you don't want to have it expand too much because the
+		screen is so small. How you manage your menu should
+		depend on the project. Here's some great info on it:
+		http://www.alistapart.com/articles/organizing-mobile/
+		*/
+		ul.sub-menu,
+		ul.children {
+			
+			@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+				margin: 0;
+				width: auto;//200px;
+				border: 1px solid #ccc;
+				border-top: 0;
+				position: absolute;
+				display: none;
+				z-index: 8999;
+				}// * BP
+		
+		
+			li {
+
+				a {
+					padding-left: 30px;
+
+					@include breakpoint($tablet, $no-query: '.no-mediaqueries') {			
+						padding-left: 10px;
+						border-right: 0;
+						display: block;
+						width: 180px;
+						border-bottom: 1px solid #ccc;
+						}// * BP
+							
+					&:hover,
+					&:focus {}
+
+					&:link {}
+
+				}// a
+
+				&:first-child {}
+
+				&:last-child {
+					@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+						border-bottom: 0;
+						}
+				
+				}
+
+			}// li
+			
+			/* highlight sub-menu current page */
+			li.current-menu-item,
+			li.current_page_item,
+			li.current-page-ancestor {
+				a {
+					}
+			}
+		
+		}// children
+		
+		/* showing sub-menus */
+		&:hover ul {
+		
+			@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+				top: auto;
+				display: block;
+				}// * BP
+		
+		}
+
+
+	} /* end .menu li */
+
+	/* highlight current page */
+	li.current-menu-item,
+	li.current_page_item,
+	li.current-page-ancestor {
+
+		a {
+			background: $accent;
+			color: $white;
+			}
+
+	}  /* end current highlighters */
+
+} /* end .nav */

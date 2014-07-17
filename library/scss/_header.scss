@@ -1,0 +1,40 @@
+// HEADER
+.header {
+	margin: 0 auto;
+	background: transparent;
+		@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+			width: 100%;
+/* 			width: 96%; */
+			}// * BP
+		@include breakpoint(67em, $no-query: '.no-mediaqueries') {
+			}// * BP
+	}
+#inner-header {
+	width: 100%;
+	position: relative;
+	}
+#logo  {
+	padding: 0 2%;
+	float: left;
+	width: 70%;
+	margin: .45em 0;
+	a {
+		display: block;
+		width: 100%;
+		//max-width: 345px;
+		@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+				&:hover {
+					opacity: .8;
+				}
+			}// * BP
+	}// a
+	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+		float: none;
+		padding: 0;
+		margin: $marginhalf 0;
+		width: auto;
+		}// * BP
+}// #logo
+
+
+

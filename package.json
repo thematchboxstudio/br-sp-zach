@@ -1,0 +1,19 @@
+{
+  "name": "STARTER",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "grunt-contrib-nodeunit": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-imagemin": "*",
+    "grunt-contrib-sass": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-autoprefixer": "*",
+    "grunt-svgmin": "*",
+    "grunt-imageoptim": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-combine-media-queries": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-dr-svg-sprites": "*"
+  }
+}
