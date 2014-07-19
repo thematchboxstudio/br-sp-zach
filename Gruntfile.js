@@ -25,6 +25,28 @@ module.exports = function(grunt) {
 				}]
 			}
 		},
+		svgsprite       : {
+			spriteSass    : {
+			  src         : ['library/images/icon'],
+			  dest        : 'library/img',
+			  options     : {
+
+			   	prefix: "icon",
+
+			    render    : {
+			      css     : false,
+			      scss    : {
+			        dest  : '../scss/_icons.scss'
+			      }
+			    },
+			    //maxwidth  : 40,
+			    //maxheight : 40,
+			    padding   : 0,
+			    keep      : true,
+			    dims      : true
+			  }
+			}
+		},
 		imageoptim: {
 		  myTask: {
 		    options: {
@@ -57,7 +79,7 @@ module.exports = function(grunt) {
 		},
 		watch: { /// WATCH - watches files and performs tasks when there are changes
 				src: {
-					files: ['library/js/*/*.js','library/js/scripts.js', 'library/scss/*.scss', '*.html'],
+					files: ['library/js/*/*.js','library/js/scripts.js', 'library/scss/*.scss', '*.html', 'library/css/nav/*.css'],
 					tasks: [ 'sass:dist','autoprefixer:dist', 'uglify:dist'],
 					options: {
 						livereload: true,
@@ -116,15 +138,6 @@ module.exports = function(grunt) {
 				keepSpecialComments: 0,
 			}
 		},
-		processhtml: {
-			options: {
-		    },
-		    dist: {
-		      files: {
-		        'mb-build/index.html': ['index.html']
-		      }
-		    }
-		  },
   		copy: { /// THIS IS THE PART OF THE BUILD PROCESS THAT COPIES THE NEEDED FILES TO THE NEW BUILD FOLDER THEME. YOU JUST UPLOAD THAT THEME SINCE IT HAS ONLY THE FILES THAT ARE NEEDED
 		  main: {
 		    files: [
@@ -142,10 +155,9 @@ module.exports = function(grunt) {
 
 	// Load the plugin that provides the "uglify" task.
 	grunt.loadNpmTasks('grunt-contrib-uglify');
-	grunt.loadNpmTasks('grunt-processhtml');
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-imageoptim');
-
+	grunt.loadNpmTasks('grunt-svg-sprite');
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-combine-media-queries');
@@ -154,6 +166,7 @@ module.exports = function(grunt) {
 
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	// Default task(s).
+	grunt.registerTask('images', ['imagemin', 'imageoptim']);
 	grunt.registerTask('build', ['uglify:build', 'sass:build', 'autoprefixer:build', 'cmq:build', 'cssmin', 'imagemin', 'imageoptim', 'copy']);
 
 

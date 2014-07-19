@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "devDependencies": {
     "grunt": "~0.4.4",
+    "grunt-contrib-jshint": "*",
     "grunt-contrib-nodeunit": "*",
     "grunt-contrib-uglify": "*",
     "grunt-contrib-imagemin": "*",
@@ -11,9 +12,12 @@
     "grunt-autoprefixer": "*",
     "grunt-svgmin": "*",
     "grunt-imageoptim": "*",
+    "grunt-uncss": "*",
     "grunt-contrib-cssmin": "*",
     "grunt-combine-media-queries": "*",
     "grunt-contrib-copy": "*",
-    "grunt-processhtml": "^0.3.3"
+    "grunt-dr-svg-sprites": "*",
+    "grunt-svg-sprite": "^0.2.0",
+    "grunt-modernizr": "^0.5.2"
   }
 }

@@ -12,20 +12,35 @@
 
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.3.6/slick.css"/>
         <link rel="stylesheet" href="library/css/style.css">
-<link rel="stylesheet" type="text/css" href="//cloud.typography.com/6916892/646704/css/fonts.css" />
+
+ <script type="text/javascript" src="//use.typekit.net/snm0hbq.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
+            <h1 id="logo" class="icon-bottle-rocket-logo">Bottle Rocket</h1>
 
+            <nav id="bt-menu" class="bt-menu" style="z-index: 999999;">
+                <a href="#" class="bt-menu-trigger"><span>Menu</span></a>
+                <ul>
+                    <li><a class="nav-item-one" href="#">About Us</a></li>
+                    <li><a class="nav-item-two" href="#">Work</a></li>
+                    <li><a class="nav-item-three" href="#">Clients</a></li>
+                    <li><a class="nav-item-four" href="#">Blog</a></li>
+                    <li><a class="nav-item-five" href="#">Contact</a></li>
+                </ul>
+
+            </nav>
 
         <!-- //*************************************** FEATURE HEADER *************************************** -->
 
          <!-- <div class="section feature-header" style="background-image:url(library/img/slider-1.jpg);"> -->
-        <div class="section feature-header">
 
+        <div class="section feature-header">
+            <h2>Who said the sky's the <span>limit</span>?</h2>
          <!--    USE THIS IS YOU NEED TO USE A FULL WIDTH/HEIGHT VIDEO - BE SURE TO REMOVE THE BG IMAGE FROM .feature-header AND UNCOMMENT INLINE SCRIPT AT THE BOTTOM OF THE PAGE -->
 
          <video autoplay loop data-origin-y="50" data-origin-x="30" poster="" id="player">
@@ -39,44 +54,62 @@
 
         <div class="section animated icons clearfix">
 
+                <canvas id="stage"></canvas>
 
-            <div class="wrap">
-                <ul>
-                    <li class="threecol first"><img src="library/images/icon/instagram.svg"></li>
-                    <li class="threecol"><img src="library/images/icon/facebook.svg"></li>
-                    <li class="threecol"><img src="library/images/icon/twitter.svg"></li>
-                    <li class="threecol"><img src="library/images/icon/instagram.svg"></li>
+                <ul class="twelvecol first clearfix">
+                    <li class="animated icons-first icon icon-rocket icon-rocket-dims"></li>
+                    <li class="animated icons-first icon icon-br-logo icon-br-logo-dims"></li>
+                    <li class="animated icons-first icon icon-space-thing icon-space-thing-dims"></li>
+                    <li class="animated icons-first icon icon-helmet icon-helmet-dims"></li>
+                    <li class="animated icons-first icon icon-telescope icon-telescope-dims"></li>
                 </ul>
-            </div>
+                <ul class="icons-second twelvecol first clearfix">
+                    <li class="animated icons-second icon icon-facebook icon-facebook-dims"></li>
+                    <li class="animated icons-second icon icon-twitter icon-twitter-dims"></li>
+                    <li class="animated icons-second icon icon-flickr icon-flickr-dims"></li>
+                </ul>
+
 
         </div>
 
-        <!-- //*************************************** COPY *************************************** -->
 
-        <div class="section animated copy clearfix">
 
-            <div class="wrap">
 
-                <div class="eightcol first">
+        <!-- //*************************************** BUTTONS AND FORMS *************************************** -->
 
-                    <span>Typeface Name</span>
-                    <h1>Example Headline One</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non tempus nibh, non euismod erat. Etiam sit amet aliquet mauris, quis consectetur dui. Vestibulum risus ipsum, egestas ac pulvinar vel, aliquet nec neque. Duis accumsan varius sollicitudin. </p>
+        <div class="section animated buttons forms clearfix">
+
+            <div class="wrap eightcol clearfix forms-wrap">
+
+                <div class="fivecol first button-one-wrap clearfix">
+
+                     <div class="button-one clearfix">
+                        <span>Explore</span>
+                        <a href="#" class="icon-r-arrow-btn">explore</a>
+                    </div>
+
+                    <div class="button-two">Read More</div>
 
                 </div>
 
-                <div class="fourcol">
+                <div class="fivecol last button-two-wrap">
 
-                    <h2>Example Headline One</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non tempus nibh, non euismod erat. Etiam sit amet aliquet mauris, quis consectetur dui.</p>
+                    <form class="">
+                        <input type="text" placeholder="First"></br>
+                        <input type="text" placeholder="Last" style="margin-bottom: 0;">
+                        <a class="button-two" href="">Submit</a>
+                    </form>
 
                 </div>
 
             </div>
 
+
         </div>
 
-        <!-- //*************************************** CASE STUDY INDEX *************************************** -->
+
+
+       <!-- //*************************************** CASE STUDY INDEX *************************************** -->
 
         <div class="section animated case-study-index">
 
@@ -139,43 +172,61 @@
 
         </div>
 
+
+
+
+<div class="section animated image-block clearfix">
+    <img src="library/img/showtime.jpg" style="width: 100%;" />
+    <div class="full-black-button">
+        <button class="btn btn-1 btn-1b">Launch All Work.</button></div>
+
+</div>
+
+<div class="section animated image-block image-block-border clearfix">
+    <h2>Food Network <span>mobile.</span></h2>
+    <span class="icon-down-arrow" href="">down</span>
+    <img src="library/img/food-network.jpg" style="width: 100%;" />
+</div>
+
+
+
+
+        <!-- //*************************************** COPY *************************************** -->
+
+        <div class="section animated copy clearfix">
+
+
+            <div class="wrap clearfix">
+
+                <div class="plus red twocol first"></div>
+
+                <div class="eightcol">
+
+                    <h1>Example Headline One</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non tempus nibh, non euismod erat. Etiam sit amet aliquet mauris, quis consectetur dui. Vestibulum risus ipsum, egestas ac pulvinar vel, aliquet nec neque. Duis accumsan varius sollicitudin.</p>
+
+                </div>
+
+                <div class="plus red twocol last"></div>
+
+            </div>
+
+
+        </div><!-- section -->
+
+
+
         <!-- //*************************************** CASE STUDY DETAILS *************************************** -->
 
         <div class="section animated case-study">
 
         </div>
 
-        <!-- //*************************************** BUTTONS AND FORMS *************************************** -->
 
-        <div class="section animated buttons forms clearfix">
-
-            <div class="wrap">
-
-                <div class="fourcol first">
-
-                     <div class="button-one">About Us</div>
-
-                    <div class="button-two">Read More</div>
-
-                </div>
-
-                <div class="eightcol">
-
-                    <form>
-                        <input type="text" placeholder="Search"></br>
-                        <input type="Submit">
-                    </form>
-
-                </div>
-
-            </div>
-
-
-        </div>
 
         <!-- //*************************************** SLIDER *************************************** -->
 
-        <div class="section animated slider">
+        <div class="section animated slider image-slider">
 
             <div>
                 <img src="library/img/slider-1.jpg">
@@ -203,9 +254,14 @@
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="library/js/libs/jquery-1.11.0.min.js"><\/script>')</script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.12.1/TweenMax.min.js"></script>
+
+        <script src="http://code.createjs.com/createjs-2013.12.12.min.js"></script>
         <script src="library/js/global.min.js"></script>
-
-
+    <script src="library/js/libs/nav/classie.js"></script>
+    <script src="library/js/libs/nav/borderMenu.js"></script>
+<script>
+</script>
 
     </body>
 </html>

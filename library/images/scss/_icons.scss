@@ -1,0 +1,105 @@
+%icon {
+	background-repeat: no-repeat;
+	background-image: url(svg/sprite.svg);
+}
+
+.icon-drink {
+	background-position: 0 0;
+	@extend %icon;
+}
+
+.icon-drink-dims {
+	width: 35.7px;
+	height: 35.7px;
+}
+
+.icon-facebook {
+	background-position: 0 -36px;
+	@extend %icon;
+}
+
+.icon-facebook-dims {
+	width: 35px;
+	height: 35px;
+}
+
+.icon-instagram {
+	background-position: 0 -71px;
+	@extend %icon;
+}
+
+.icon-instagram-dims {
+	width: 35.2px;
+	height: 35.2px;
+}
+
+.icon-kdc {
+	background-position: 0 -107px;
+	@extend %icon;
+}
+
+.icon-kdc-dims {
+	width: 117px;
+	height: 31.5px;
+}
+
+.icon-linkedin {
+	background-position: 0 -139px;
+	@extend %icon;
+}
+
+.icon-linkedin-dims {
+	width: 35px;
+	height: 35px;
+}
+
+.icon-money {
+	background-position: 0 -174px;
+	@extend %icon;
+}
+
+.icon-money-dims {
+	width: 31px;
+	height: 31px;
+}
+
+.icon-person {
+	background-position: 0 -205px;
+	@extend %icon;
+}
+
+.icon-person-dims {
+	width: 35.6px;
+	height: 35.6px;
+}
+
+.icon-phone {
+	background-position: 0 -241px;
+	@extend %icon;
+}
+
+.icon-phone-dims {
+	width: 35.6px;
+	height: 35.6px;
+}
+
+.icon-ring {
+	background-position: 0 -277px;
+	@extend %icon;
+}
+
+.icon-ring-dims {
+	width: 35.8px;
+	height: 35.8px;
+}
+
+.icon-twitter {
+	background-position: 0 -313px;
+	@extend %icon;
+}
+
+.icon-twitter-dims {
+	width: 35.3px;
+	height: 35.3px;
+}
+
