@@ -8,201 +8,189 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>bottle rocket style prototype</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.3.6/slick.css"/>
         <link rel="stylesheet" href="library/css/style.css">
 
- <script type="text/javascript" src="//use.typekit.net/snm0hbq.js"></script>
-<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+        <script type="text/javascript" src="//use.typekit.net/snm0hbq.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
 
-            <h1 id="logo" class="icon-bottle-rocket-logo">Bottle Rocket</h1>
+        <h1 id="logo" class="icon-bottle-rocket-logo">Bottle Rocket</h1>
 
-            <nav id="bt-menu" class="bt-menu" style="z-index: 999999;">
-                <a href="#" class="bt-menu-trigger"><span>Menu</span></a>
-                <ul>
-                    <li><a class="nav-item-one" href="#">About Us</a></li>
-                    <li><a class="nav-item-two" href="#">Work</a></li>
-                    <li><a class="nav-item-three" href="#">Clients</a></li>
-                    <li><a class="nav-item-four" href="#">Blog</a></li>
-                    <li><a class="nav-item-five" href="#">Contact</a></li>
-                </ul>
+        <nav id="bt-menu" class="bt-menu" style="z-index: 999999;">
+            <a href="#" class="bt-menu-trigger"><span>Menu</span></a>
+            <ul>
+                <li><a class="nav-item-one" href="#">About Us</a></li>
+                <li><a class="nav-item-two" href="#">Work</a></li>
+                <li><a class="nav-item-three" href="#">Clients</a></li>
+                <li><a class="nav-item-four" href="#">Blog</a></li>
+                <li><a class="nav-item-five" href="#">Contact</a></li>
+            </ul>
+        </nav>
 
-            </nav>
-
-        <!-- //*************************************** FEATURE HEADER *************************************** -->
-
-         <!-- <div class="section feature-header" style="background-image:url(library/img/slider-1.jpg);"> -->
-
-        <div class="section feature-header">
-            <h2>Who said the sky's the <span>limit</span>?</h2>
-         <!--    USE THIS IS YOU NEED TO USE A FULL WIDTH/HEIGHT VIDEO - BE SURE TO REMOVE THE BG IMAGE FROM .feature-header AND UNCOMMENT INLINE SCRIPT AT THE BOTTOM OF THE PAGE -->
-
-         <video autoplay loop data-origin-y="50" data-origin-x="30" poster="" id="player">
-            <source src="library/img/test.webm" type="video/webm">
-            <source src="library/img/test.mp4" type="video/mp4">
-        </video>
-
-        </div>
-
-        <!-- //*************************************** ICONS *************************************** -->
-
-        <div class="section animated icons clearfix">
-
-                <canvas id="stage"></canvas>
-
-                <ul class="twelvecol first clearfix">
-                    <li class="animated icons-first icon icon-rocket icon-rocket-dims"></li>
-                    <li class="animated icons-first icon icon-br-logo icon-br-logo-dims"></li>
-                    <li class="animated icons-first icon icon-space-thing icon-space-thing-dims"></li>
-                    <li class="animated icons-first icon icon-helmet icon-helmet-dims"></li>
-                    <li class="animated icons-first icon icon-telescope icon-telescope-dims"></li>
-                </ul>
-                <ul class="icons-second twelvecol first clearfix">
-                    <li class="animated icons-second icon icon-facebook icon-facebook-dims"></li>
-                    <li class="animated icons-second icon icon-twitter icon-twitter-dims"></li>
-                    <li class="animated icons-second icon icon-flickr icon-flickr-dims"></li>
-                </ul>
-
-
+        <!-- //*************************************** FEATURE HEADER -->
+        <div class="section feature-header animatedParent animateOnce">
+            <h2 id="fittext1" class="animated fadeIn slowestest">Who said the sky is the <em>limit</em>?</h2>
+            <video autoplay loop data-origin-y="50" data-origin-x="30" poster="" id="player">
+                <source src="library/img/test.webm" type="video/webm">
+                <source src="library/img/test.mp4" type="video/mp4">
+            </video>
+            <img class="backup" src="library/img/space-backup.jpg" />
         </div>
 
 
+        <!-- //*************************************** ICONS -->
+        <div class="section  icons clearfix">
+            <canvas id="stage"></canvas>
+            <ul class="twelvecol first clearfix animatedParent animateOnce">
+                <li class="animated fadeInUp icons-first icon icon-rocket icon-rocket-dims"></li>
+                <li class="animated fadeInUp icons-first icon icon-br-logo icon-br-logo-dims"></li>
+                <li class="animated fadeInUp icons-first icon icon-space-thing icon-space-thing-dims"></li>
+                <li class="animated fadeInUp icons-first icon icon-helmet icon-helmet-dims"></li>
+                <li class="animated fadeInUp icons-first icon icon-telescope icon-telescope-dims"></li>
+            </ul>
+            <ul class="icons-second twelvecol first clearfix animatedParent animateOnce ">
+                <li class="animated fadeIn slow icons-second icon icon-facebook icon-facebook-dims"></li>
+                <li class="animated fadeIn slow icons-second icon icon-twitter icon-twitter-dims"></li>
+                <li class="animated fadeIn slow icons-second icon icon-flickr icon-flickr-dims"></li>
+            </ul>
+        </div>
 
-
-        <!-- //*************************************** BUTTONS AND FORMS *************************************** -->
-
-        <div class="section animated buttons forms clearfix">
-
-            <div class="wrap eightcol clearfix forms-wrap">
-
-                <div class="fivecol first button-one-wrap clearfix">
-
+        <!-- //*************************************** BUTTONS AND FORMS -->
+        <div class="section buttons forms clearfix">
+            <div class="wrap eightcol clearfix forms-wrap animatedParent animateOnce">
+                <div class="fivecol first button-one-wrap clearfix animated fadeIn slower">
                      <div class="button-one clearfix">
                         <span>Explore</span>
                         <a href="#" class="icon-r-arrow-btn">explore</a>
                     </div>
-
-                    <div class="button-two">Read More</div>
-
+                    <button class="btn btn-1 btn-1c">Read More</button>
                 </div>
-
-                <div class="fivecol last button-two-wrap">
-
+                <div class="fivecol last button-two-wrap animated fadeIn slower">
                     <form class="">
-                        <input type="text" placeholder="First"></br>
-                        <input type="text" placeholder="Last" style="margin-bottom: 0;">
-                        <a class="button-two" href="">Submit</a>
+                        <input class="name-form" type="text" placeholder="First"></br>
+                        <input class="name-form" type="text" placeholder="Last" style="margin-bottom: 0;">
+                        <button class="btn btn-1 btn-1c">Submit</button>
                     </form>
-
                 </div>
-
             </div>
-
-
         </div>
 
 
 
-       <!-- //*************************************** CASE STUDY INDEX *************************************** -->
+       <!-- //*************************************** CASE STUDY INDEX -->
+        <div class="section case-study-index animatedParent animateOnce">
 
-        <div class="section animated case-study-index">
+            <div class="cs-intro first animated fadeIn slower">
+                <h1>Watch NBC<br>Mobile</h1>
+                <i class="icon-right-arrow">right arrow</i>
+        <button class="btn btn-1 btn-1b">Launch All Work.</button>
+
+            </div><!-- cs-intro -->
+
 
             <ul class="clearfix case-studies">
-                <a href="#">
+
+                <a href="#" class="case-study animated fadeIn slower">
                     <div class="overlay-text">
                         Project Title
                     </div>
                     <li>
                         <div class="overlay"></div>
-                         <img src="library/img/slider-1.jpg">
+                        <img src="library/img/cs/cs-scifi.jpg">
                     </li>
                 </a>
-                <a href="#">
+                <a href="#" class="case-study animated fadeIn slower">
                     <div class="overlay-text">
                         Project Title
                     </div>
                     <li>
                         <div class="overlay"></div>
-                         <img src="library/img/slider-2.jpg">
+                        <img src="library/img/cs/cs-scifi.jpg">
                     </li>
                 </a>
-                <a href="#">
+                <a href="#" class="case-study animated fadeIn slower">
                     <div class="overlay-text">
                         Project Title
                     </div>
                     <li>
                         <div class="overlay"></div>
-                         <img src="library/img/slider-1.jpg">
+                        <img src="library/img/cs/cs-travel.jpg">
                     </li>
                 </a>
-                <a href="#">
+                <a href="#" class="case-study animated fadeIn slower">
                     <div class="overlay-text">
                         Project Title
                     </div>
                     <li>
                         <div class="overlay"></div>
-                         <img src="library/img/slider-2.jpg">
+                        <img src="library/img/cs/cs-food.jpg">
                     </li>
                 </a>
-                <a href="#">
+             </ul>
+
+                <a href="#" class="case-study animated fadeIn slower">
                     <div class="overlay-text">
                         Project Title
                     </div>
                     <li>
                         <div class="overlay"></div>
-                         <img src="library/img/slider-1.jpg">
+                        <img src="library/img/cs/cs-bmw-large.jpg">
                     </li>
                 </a>
-                <a href="#">
+
+                <a href="#" class="case-study animated fadeIn slower">
                     <div class="overlay-text">
                         Project Title
                     </div>
                     <li>
                         <div class="overlay"></div>
-                         <img src="library/img/slider-2.jpg">
+                        <img src="library/img/cs/cs-bmw-large.jpg">
                     </li>
                 </a>
-            </ul>
+
+
+
+
+
+
+
+
 
         </div>
 
 
 
 
-<div class="section animated image-block clearfix">
-    <img src="library/img/showtime.jpg" style="width: 100%;" />
-    <div class="full-black-button">
+<div class="section image-block clearfix animatedParent animateOnce">
+    <img src="library/img/showtime.jpg" style="width: 100%;" class="animated fadeIn slower" />
+    <div class="full-black-button animated fadeIn slower">
         <button class="btn btn-1 btn-1b">Launch All Work.</button></div>
+    </div>
 
+<div class="section image-block image-block-border clearfix animatedParent animateOnce">
+    <h2 id="" class="animated fadeIn">Recipe for success.</h2>
+    <span class="icon-down-arrow animated fadeIn slowest" href="">down</span>
+    <img class="animated fadeIn" src="library/img/food-network.jpg" style="width: 100%;" />
 </div>
 
-<div class="section animated image-block image-block-border clearfix">
-    <h2>Food Network <span>mobile.</span></h2>
-    <span class="icon-down-arrow" href="">down</span>
-    <img src="library/img/food-network.jpg" style="width: 100%;" />
-</div>
 
 
 
+        <!-- //*************************************** COPY -->
 
-        <!-- //*************************************** COPY *************************************** -->
-
-        <div class="section animated copy clearfix">
+        <div class="section animatedParent animateOnce  copy clearfix">
 
 
-            <div class="wrap clearfix">
+            <div class="wrap clearfix animated fadeIn slower">
 
                 <div class="plus red twocol first"></div>
 
                 <div class="eightcol">
 
-                    <h1>Example Headline One</h1>
+                    <h1>Making a mobile experience a brand experience.</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non tempus nibh, non euismod erat. Etiam sit amet aliquet mauris, quis consectetur dui. Vestibulum risus ipsum, egestas ac pulvinar vel, aliquet nec neque. Duis accumsan varius sollicitudin.</p>
 
                 </div>
@@ -216,19 +204,19 @@
 
 
 
-        <!-- //*************************************** CASE STUDY DETAILS *************************************** -->
+        <!-- //*************************************** CASE STUDY DETAILS -->
 
-        <div class="section animated case-study">
+        <div class="section animatedParent animateOnce case-study">
 
         </div>
 
 
 
-        <!-- //*************************************** SLIDER *************************************** -->
+        <!-- //*************************************** SLIDER -->
 
-        <div class="section animated slider image-slider">
+        <div class="section animatedParent animateOnce slider image-slider">
 
-            <div>
+            <div class="animated fadeIn slower">
                 <img src="library/img/slider-1.jpg">
             </div>
 
@@ -238,13 +226,13 @@
 
         </div>
 
-        <!-- //*************************************** NEWS ARTICLE *************************************** -->
+        <!-- //*************************************** NEWS ARTICLE -->
 
-        <div class="section animated news-article">
+        <div class="section animatedParent animateOnce news-article">
 
-            <div class="wrap">
+            <div class="wrap animated fadeIn slower">
 
-                    <h1>Introducting the New Bottle Rocket</h1>
+                    <h1>Introducing the New Bottle Rocket</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non tempus nibh, non euismod erat. Etiam sit amet aliquet mauris, quis consectetur dui. Vestibulum risus ipsum, egestas ac pulvinar vel, aliquet nec neque. Duis accumsan varius sollicitudin. </p>
                     <div class="button-two">Read More</div>
 

@@ -17,6 +17,58 @@ html, body {
 	height: 100%;
 }
 
+
+// JS MQ styles
+   html {
+        font-family: 'mobile';
+    }
+
+    * html { /* IE6 */
+        font-family: 'desktop'
+    }
+
+    *+html { /* IE7 */
+        font-family: 'desktop'
+    }
+
+    @media \0screen {
+        html {  /* IE8 */
+            font-family: 'desktop'
+        }
+    }
+
+    /* Reset your font families here!
+     ----------------------------------- */
+    body {
+        font-family: $serif;
+    }
+
+    /* Queries for supported browsers.
+     ----------------------------------- */
+    body:after {
+        display: none;
+    }
+
+    @media screen and (min-width: $phone-landscape) {
+        html {
+            font-family: "skinny";
+        }
+        body:after {
+            content: "skinny";
+        }
+    }
+
+    @media screen and (min-width: $desktop) {
+        html {
+            font-family: "desktop";
+        }
+        body:after {
+            content: "desktop";
+        }
+    }
+
+
+
 @media only screen and (min-width: $tablet) {
 
 	// Grid
@@ -65,31 +117,11 @@ LAYOUT & GRID STYLES
 	width: 96%;
 
 	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
-		max-width: 960px;
+		max-width: $site-width;
 		}// * BP
 
 	}// wrap
-#container {
-	height: 100%;
-	width: 100%;
-	position: relative;
-	}
-.content-header-wrap {
-	height: auto;
-	min-height: 100%;
-	margin-bottom: -$footer-height;
-		&:after {
-			content: "";
-			display: block;
-			height: $footer-height;
-			}
-	}
 
-#oc-wrap{
-	max-width:1200px;
-	margin:0 auto;
-	background:white;
-}
 /*********************
 LINK STYLES
 *********************/
@@ -119,255 +151,17 @@ a, a:visited {
 	}
 }
 
-/******************************************************************
-H1, H2, H3, H4, H5 STYLES
-******************************************************************/
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
-	//font-family: $sans-serif;
-	text-rendering: optimizelegibility;
-	font-weight: 500;
-	margin: 0;
-	line-height: 1.6;
-	/*
-	if you're going to use webfonts, be sure to check your weights
-	http://css-tricks.com/watch-your-font-weight/
-	*/
-
-	/* removing text decoration from all headline links */
-	a {
-		text-decoration: none;
-	}
-	span {
-		color: $red;
-	}
-}
-
-h1, .h1 {
-	//@include rem-fallback(font-size, 2.5);
-	font-size: 3.25em;
-	font-weight: 500;
-	line-height: 1.3333;
-	letter-spacing: .01em;
-	color: $red;
-}
-
-h2, .h2 {
-	//@include rem-fallback(font-size, 1.75);
-	font-size: 1.75em;
-	line-height: 1.4;
-}
-
-h3, .h3 {
-	//@include rem-fallback(font-size, 1.125);
-	font-size: 1.125em;
-}
-
-h4, .h4 {
-	//@include rem-fallback(font-size, 1.1);
-	font-size: 1.1em;
-	font-weight: 700;
-}
-
-h5, .h5 {
-	//@include rem-fallback(font-size, 0.846);
-	font-size: 0.846em;
-	line-height: 2.09;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-}
 
 /*********************
 HEADER SYTLES
 *********************/
-
-.header {}
-
-
-#logo {
-	@extend .image-replacement;
-
-}
-
-
 
 
 
 /*********************
 POSTS & CONTENT STYLES
 *********************/
-
-#content {
-	max-width: $site-width;
-	margin: $margin2x auto 0;
-}
-
-
-// Tout Modules
-
-.tout {
-	background: #f1f1f1;
-	padding: $marginhalf;
-
-	h2 {
-		margin-top: $marginquarter;
-		}
-
-	}
-
-
-//****************** FEATURE HEADER *******************
-
-.feature-header{
-	background: $black;
-	width:100%;
-	height:100%;
-	background-repeat:no-repeat;
-	background-position: center center;
-	background-size: cover;
-	overflow: hidden;
-	position: relative;
-
-	img{
-		width:100%;
-		height:100%;
-	}
-	video {
-    	height: 100%;
-    	width: 100%;
-    	transform: scale(1.2);
-	   	transform-origin: 30% 50%;
-    }
-    color: $white;
-
-    h2 {
-    	@include absolute-center;
-
-    	font-size: 2rem;
-
-    	@include breakpoint($phone-landscape) {
-    		font-size: 2.25rem;
-    		}// bp
-       	@include breakpoint($tablet) {
-    		font-size: 4.25rem;
-    		}// bp
-    	@include breakpoint($desktop) {
-    		font-size: 4.25rem;
-    		}// bp
-    }
-
-}
-
-// video#bgvid {
-// position: fixed; right: 0; bottom: 0;
-// min-width: 100%; min-height: 100%;
-// width: auto; height: auto; z-index: -100;
-// background: url(library/img/slider-1.jpg) no-repeat;
-// background-size: cover;
-// }
-// source{
-
-// }
-
-
-/********************
-ICON STYLES
-********************/
-
-.section.icons {
-	position: relative;
-	overflow: hidden;
-	background: $red;
-}
-
-.icons{
-	background: $red;
-	padding: 5em 0;
-	z-index: 2;
-	@include breakpoint($tablet) {
-	    width: 100%;
-	    padding: 0;
-
-	    //min-height: $icons-height;
-	    //display: table;
-	}// * BP
-
-	ul {
-		position: relative;
-		z-index: 22;
-		width: 100%;
-		text-align: center;
-		@include breakpoint($tablet) {
-			//display: table-cell;
-			//vertical-align: middle;
-
-			text-align: center;
-			&:first-of-type {
-				margin-top: 5em;
-			}
-			&:last-of-type {
-				margin-bottom: 5em;
-			}
-		}// * BP
-	}// ul
-
-	li{
-		display: block;
-		margin: 0 auto;
-		text-align: center;
-		margin-bottom: 1.25em;
-		@include breakpoint($tablet) {
-		    display: inline-block;
-		    margin: 0 2%;
-	   		vertical-align: middle;
-	   		@include hovers;
-			&:hover {
-				cursor: pointer;
-				//opacity: .8;
-			}
-		}
-	}// li
-
-}// icons
-
-
-canvas#text {
-	display: none;
-}
-canvas#stage {
-	position: absolute;
-	z-index: 1;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-}
-
-
-
-/********************
-COPY STYLES
-********************/
-
-.copy{
-	min-height: 350px;
-	padding: 5em 0;
-
-	.fourcol{
-		margin-top:37px;
-	}
-	.wrap {
-		height: 15vh;
-	}
-	h1 {
-		text-align: center;
-	}
-	p {
-		text-align: center;
-		line-height: 2;
-	}
-}
-
 
 .plus {
 	//width: 56px;
@@ -377,454 +171,8 @@ COPY STYLES
 }
 
 
-/********************
-CASE STUDY INDEX
-********************/
 
-.case-study-index {
-	height: auto;
-	width:100%;
 
-	h2 {
-		@include rem-fallback(font-size, 2.5);
-		text-transform: uppercase;
-		color: $white;
-		font-weight: 300;
-		letter-spacing: .1em;
-	}
-
-	.case-studies a {
-		overflow:hidden;
-		display:block;
-		position:relative;
-		width:100%;
-		height:auto;
-		float:left;
-
-		@include breakpoint(40em) {
-			width:50%;
-		}
-
-		@include breakpoint($desktop, $no-query: '.no-mediaqueries') {
-			width:33.3333333%;
-		}
-
-		&:hover{
-			li{
-				@include transform(scale(1.1));
-
-			}
-
-			.overlay{
-				opacity: .8;
-				color: red;
-			}
-
-			.overlay-text{
-				opacity: 1;
-				vertical-align: middle;
-			}
-		}
-
-	}
-
-	ul{
-		margin:1.25em;
-	}
-
-	li{
-		width:100%;
-		@include transition(transform, 0.35s, ease-in-out);
-		@include transform(scale(1));
-		-webkit-transform-style: preserve-3d;
-		-webkit-backface-visibility: hidden;
-	}
-
-	img{
-		width: 100%;
-	}
-
-}
-
-.overlay{
-    position: absolute;
-    width:100%;
-    height:100%;
-    opacity: 0;
-    //background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0d…0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2xlc3NoYXQtZ2VuZXJhdGVkKSIgLz48L3N2Zz4=);
-    // background-image: -webkit-linear-gradient(top,#37B34A 0,#00B495 100%);
-    // background-image: -moz-linear-gradient(top,#37B34A 0,#00B495 100%);
-    // background-image: -o-linear-gradient(top,#37B34A 0,#00B495 100%);
-    // background-image: linear-gradient(to bottom,#37B34A 0,#00B495 100%);
-    background-color:red;
-    @include transition(opacity, 0.35s, ease-in-out);
-
-}
-
-.overlay-text{
-    color: $white;
-    font-weight:800;
-    position: absolute;
-    opacity: 0;
-    z-index: 2;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    display: inline-block;
-    margin-top: -30px;
-    top: 50%;
-    margin-left: -5px;
-    @include transition(opacity, 0.35s, ease-in-out);
-    @include rem-fallback(font-size, 2.5);
-    @include breakpoint($tablet, $no-query: '.no-mediaqueries') {
-        margin-top: -47px;
-        @include rem-fallback(font-size, 3.5);
-    }
-}
-
-
-/********************
-BUTTONS AND FORMS
-********************/
-.buttons{
-	padding: 5em 0;
-	@include breakpoint($tablet) {
-		padding: 5em 6em;
-	}
-	@include breakpoint($desktop) {
-		padding: 5em 15em;
-	}
-	input[type=text]{
-		width:100%;
-		margin-bottom: $margin;
-		background: transparent;
-		border: none;
-		height: 55px;
-		padding-left:15px;
-		border: 4px solid $red;
-	}
-}// buttons
-
-
-.button-one-wrap {
-	margin-bottom: $margin2x;
-
-}
-.button-one {
-	border: 4px solid $red;
-	cursor: pointer;
-	@include hovers;
-
-	span {
-		color: $red;
-		font-size: 20px;
-		font-weight: 500;
-		line-height: 2.3;
-		text-indent: 10px;
-		float: left;
-		width: 75%;
-		display: block;
-
-	}
-	.icon-r-arrow-btn {
-		float: right;
-		@include hovers;
-		&:hover {
-
-		}
-	}
-
-	&:hover {
-		background: $red;
-		span {
-			color: $darkred;
-		}
-	}
-}
-
-.button-two-wrap {
-}
-.button-two {
-	padding: 1px 10px;
-	font-size: 18px;
-	font-weight: 500;
-	background: $red;
-	color: $darkred;
-	border: 4px solid $red;
-	float: left;
-	margin-top: $margin;
-	text-decoration: none;
-	@include hovers;
-	&:hover {
-		cursor: pointer;
-		color: $red;
-		background: $white;
-
-
-	}
-}
-
-
-.forms-wrap {
-	float: none;
-}
-[placeholder] {
-	color: $red;
-	}
-
-::-webkit-input-placeholder {
-	@include rem-fallback(font-size, 1);
-	//text-transform: uppercase;
-	color: $red;
-	font-size: 20px;
-	line-height: 1;
-	}
-
-:-moz-placeholder { /* Firefox 18- */
-	@include rem-fallback(font-size, 1);
-	//text-transform: uppercase;
-	color: $red;
-	}
-
-::-moz-placeholder {  /* Firefox 19+ */
-	@include rem-fallback(font-size, 1);
-	//text-transform: uppercase;
-	color: $red;
-	}
-
-:-ms-input-placeholder {
-	@include rem-fallback(font-size, 1);
-	//text-transform: uppercase;
-	color: $red;
-	}
-
-[placeholder]:focus::-webkit-input-placeholder {
-  transition: opacity 0.1s 0.1s ease-in-out;
-  opacity: 0;
-}
-
-.name-form:focus::-webkit-input-placeholder {
-  transition: text-indent 0.1s 0.1s ease-in-out;
-  text-indent: -100%;
-  opacity: 1;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/********************
-IMAGE BLOCKS
-********************/
-
-.image-block {
-	position: relative;
-
-.btn {
-
-	border: none;
-	//font-family: inherit;
-	//font-size: inherit;
-	//color: inherit;
-	//background: none;
-	cursor: pointer;
-	//padding: 25px 80px;
-	//display: inline-block;
-	//margin: 15px 30px;
-	//text-transform: uppercase;
-	//letter-spacing: 1px;
-	//font-weight: 700;
-	outline: none;
-	position: relative;
-	@include hovers(.2s);
-}
-
-
-
-.btn:after {
-	content: '';
-	position: absolute;
-	z-index: -1;
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	transition: all 0.3s;
-}
-/* Button 1 */
-.btn-1 {
-
-	z-index: 10;
-	background: transparent;
-	font-weight: 400;
-	color: $darkred;
-	text-decoration: none;
-	border: 4px solid $darkred;
-	padding: 2px 12px;
-	display: inline-block;
-	margin: 1rem auto;
-	letter-spacing: .05em;
-	@include hovers(.2s);
-	&:hover {
-		background: $darkred;
-		color: $red;
-	}
-}
-
-/* Pseudo elements for icons */
-.btn:before {
-	font-family: 'icomoon';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	position: relative;
-	-webkit-font-smoothing: antialiased;
-}
-
-/* Button 1b */
-.btn-1b:after {
-	width: 100%;
-	height: 0;
-	bottom: 0;
-	left: 0;
-	background: $darkred;
-}
-
-.btn-1b:hover,
-.btn-1b:active {
-	color: $red;
-}
-
-.btn-1b:hover:after,
-.btn-1b:active:after {
-	height: 100%;
-}
-
-
-	.full-black-button {
-		width: 100%;
-		display: block;
-		background: $red;
-		position: relative;
-		text-align: center;
-		span {
-			@include button($darkred, $red);
-		}
-
-	}
-	&.image-block-border {
-		h2 {
-			position: absolute;
-		}
-		h2 {
-			color: #dd191d;
-			top: 0;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			height: 131px;
-			margin: auto;
-			width: 68vw;
-			font-weight: 600;
-			letter-spacing: .01em;
-			span {
-				color: $white;
-			}
-			font-size: 2rem;
-			@include breakpoint($phone-landscape) {
-				font-size: 3rem;
-			}// bp
-			@include breakpoint($tablet) {
-				font-size: 5rem;
-			}// bp
-			@include breakpoint($desktop) {
-				font-size: 6rem;
-			}// bp
-		}
-		.icon-down-arrow {
-
-			position: absolute;
-			display: block;
-			bottom: 6rem;
-			left: 48vw;
-			@include hovers(.25s, ease-in-out);
-			&:hover {
-				cursor: pointer;
-				transform: scale(1.25);
-			}
-		}
-		img {
-			border: 10px solid $black;
-		}
-	}
-}
-
-
-
-
-/********************
-SLIDER
-********************/
-.slider{
-	margin-bottom:0;
-
-	img{
-		width:100%;
-	}
-}
-
-.slick-dots{
-	display: none;
-	margin: 0;
-	bottom: 15px;
-}
-
-.slick-next, .slick-prev {
-	top: 45%;
-	opacity: 1;
-	@include hovers;
-	&:before {
-		content: "";
-	}
-	&:hover {
-		opacity: .75;
-	}
-	&.slick-disabled {
-		opacity: 0;
-	}
-}
-
-.slick-prev{
-	left:0;
-	transform: rotate(180deg);
-
-	.image-slider & {
-		left: 10%;
-	}
-}
-
-.slick-next{
-	right:0;
-	.image-slider & {
-		right: 10%;
-	}
-}
 
 /********************
 NEWS
@@ -833,61 +181,5 @@ NEWS
 	padding: 5em 0;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/******************************************************************
-FORM STYLES
-******************************************************************/
-/*
-
-https://github.com/wesleytodd/LeSlide
-
-.leSlide-wrap {
-	position: relative;
-	}
-.leSlide-wrap label {
-  position: relative;
-  z-index: 1;
-  white-space: pre;
-	}
-.leSlide-wrap input {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-	}
-.leSlide-wrap input {
-  background: none;
-  border: 0;
-	}
-.leSlide-wrap label {
-  border: 1px solid #ccc;
-  background: #eee;
-  width: 350px;
-	}
-.field-focus label {
-  color: #ccc;
-  border: 1px solid #999;
-  background: #fff;
-	}
-.csstransitions .leSlide-wrap label {
-	transition: all 0.3s ease-out;
-	}
-*/
 
 

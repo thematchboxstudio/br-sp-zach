@@ -7,6 +7,9 @@ module.exports = function(grunt) {
 
 		uglify: { /// UGLIFY - minimizes and combines js files. all {src} files into {dest}.
 			dist: {
+				      options: {
+        beautify: true
+      },
 				src: ['library/js/libs/modernizr-2.6.2-respond-1.1.0.min.js', "library/js/libs/slick/slick.js", 'library/js/scripts.js'],
 				dest: 'library/js/global.min.js'
 			},
@@ -142,6 +145,7 @@ module.exports = function(grunt) {
 		  main: {
 		    files: [
 		      {expand: true, src: ['*.html','*.ico', '*.png', '*.css'], dest: 'mb-build/', filter: 'isFile'},
+		      {expand: true, src: ['library/js/libs/nav/*.js'], dest: 'mb-build/', filter: 'isFile'},
  		      //{expand: true, flatten: true, src: ['library/*.html'], dest: 'mb-build/library/', filter: 'isFile'},
  		      {expand: true, flatten: true, src: ['library/img/**'], dest: 'mb-build/library/img/', filter: 'isFile'},
  		      {expand: true, cwd: 'library/img/', src: ['**'], dest: 'mb-build/library/img/'},

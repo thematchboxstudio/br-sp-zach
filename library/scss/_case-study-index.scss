@@ -1,0 +1,208 @@
+
+$section-height: 1100px;
+
+
+/********************
+CASE STUDY INDEX
+********************/
+
+.case-study-index {
+	min-height: $section-height;
+	max-width: $site-width;
+	width: 100%;
+	margin: 0 auto;
+
+	h2 {
+		@include rem-fallback(font-size, 2.5);
+		text-transform: uppercase;
+		color: $white;
+		font-weight: 300;
+		letter-spacing: .1em;
+	}// h2
+
+
+	ul{ // four stacked
+
+	}
+
+	li{
+		width:100%;
+		@include transition(transform, 0.35s, ease-in-out);
+		@include transform(scale(1));
+		-webkit-transform-style: preserve-3d;
+		-webkit-backface-visibility: hidden;
+	}
+
+	img{
+		width: 100%;
+	}
+
+}
+
+.overlay{
+    position: absolute;
+    width:100%;
+    height:100%;
+    opacity: 0;
+    //background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0d…0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2xlc3NoYXQtZ2VuZXJhdGVkKSIgLz48L3N2Zz4=);
+    // background-image: -webkit-linear-gradient(top,#37B34A 0,#00B495 100%);
+    // background-image: -moz-linear-gradient(top,#37B34A 0,#00B495 100%);
+    // background-image: -o-linear-gradient(top,#37B34A 0,#00B495 100%);
+    // background-image: linear-gradient(to bottom,#37B34A 0,#00B495 100%);
+    background-color:red;
+    @include transition(opacity, 0.35s, ease-in-out);
+
+}
+
+.overlay-text{
+    color: $white;
+    font-weight:800;
+    position: absolute;
+    opacity: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: inline-block;
+    margin-top: -30px;
+    top: 50%;
+    margin-left: -5px;
+    @include transition(opacity, 0.35s, ease-in-out);
+    @include rem-fallback(font-size, 2.5);
+    @include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+        margin-top: -47px;
+        @include rem-fallback(font-size, 3.5);
+    }
+}
+
+
+
+
+
+.cs-intro {
+	width: 100%;
+	position: relative;
+	background: $black;
+	float: left;
+	height: 0;
+	padding-bottom: 45%;
+	padding-top: 5%;
+	padding-left: 5%;
+
+	h1 {
+		font-size: 2rem;
+		font-weight: 700;
+		line-height: 1;
+		@include breakpoint($phone-landscape) {
+			font-size: 2.75rem;
+		}
+		@include breakpoint($tablet) {
+			font-size: 3.25rem;
+		}
+		@include breakpoint($desktop) {
+			//font-size: 3.25rem;
+		}
+	}
+	.icon-right-arrow {
+		margin-top: 10px;
+	}
+	button {
+		position: absolute;
+		bottom: 15%;
+		right: 5%;
+		margin: 0;
+		color: $red;
+		border-color: $red;
+
+		&:hover {
+			color: $darkred;
+			border-color: $red;
+
+			&:after {
+				background: $red;
+			}
+		}
+		@include breakpoint(527px) {
+			right: auto;
+			bottom: 10%;
+		}
+	}// button
+	@include breakpoint($tablet) {
+		width: 50%;
+	}
+
+}// cs-intro
+
+
+
+.case-studies {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	float: none;
+	@include breakpoint($tablet) {
+		width: 50%;
+		float: right;
+	}
+}// case-studies
+
+.case-study {
+	overflow:hidden;
+	display:block;
+	position:relative;
+	width:100%;
+	height:auto;
+	max-height: 200px;
+	float:left;
+	list-style-type: none;
+
+	@include breakpoint($tablet) {
+		//width:50%;
+		max-height: 250px;
+
+	}
+
+	@include breakpoint($desktop, $no-query: '.no-mediaqueries') {
+		width: 50%;
+		max-height: none;
+	}
+
+	.overlay-text{
+		opacity: 1;
+		vertical-align: middle;
+		z-index: 3;
+	}
+	&:hover{
+
+
+		.overlay{
+			//opacity: 1;
+			//color: $red;
+		}
+
+		&:after {
+			@include breakpoint($desktop) {
+			height: 100%;
+			opacity: .95;
+			}
+		}
+
+	}// hover
+
+	&:after {
+		@include breakpoint($desktop) {
+		content: '';
+		position: absolute;
+		z-index: 2;
+		-webkit-transition: all 0.4s ease-in-out;
+		-moz-transition: all 0.4s ease-in-out;
+		transition: all 0.4s ease-in-out;
+		width: 100%;
+		height: 0;
+		bottom: 0;
+		left: 0;
+		background: $red;
+		opacity: 0;
+		}// bp
+		}
+}// case-studies a

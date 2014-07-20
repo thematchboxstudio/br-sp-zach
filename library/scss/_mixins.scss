@@ -264,7 +264,7 @@ $duration-slowest: 1s;
 }
 
 .fadeIn {
-	animation-name: fadeIn;
+	//animation-name: fadeIn;
 	&.icon:nth-of-type(1) {
 		//animation-delay: 1s;
 	}
@@ -281,7 +281,7 @@ $duration-slowest: 1s;
 .fadeInUp {
 		@for $i from 1 through 50 {
 	   &.icon:nth-of-type(#{$i}) {
-	   		animation-delay: (#{$i*0.25s});
+	   		animation-delay: (#{$i*0.125s});
 	   }
 	}
 }
@@ -293,6 +293,10 @@ $duration-slowest: 1s;
 		animation-delay: $duration-fast;
 	}
 }// animated-slow
+
+
+
+
 
 /*********************
 CSS3 GRADIENTS

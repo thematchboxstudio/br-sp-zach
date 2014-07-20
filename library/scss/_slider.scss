@@ -1,0 +1,48 @@
+
+/********************
+SLIDER
+********************/
+.slider{
+	margin-bottom:0;
+
+	img{
+		width:100%;
+	}
+}
+
+.slick-dots{
+	display: none;
+	margin: 0;
+	bottom: 15px;
+}
+
+.slick-next, .slick-prev {
+	top: 45%;
+	opacity: 1;
+	@include hovers;
+	&:before {
+		content: "";
+	}
+	&:hover {
+		opacity: .75;
+	}
+	&.slick-disabled {
+		opacity: 0;
+	}
+}
+
+.slick-prev{
+	left:0;
+	transform: rotate(180deg);
+
+	.image-slider & {
+		left: 10%;
+	}
+}
+
+.slick-next{
+	right:0;
+	.image-slider & {
+		right: 10%;
+	}
+}

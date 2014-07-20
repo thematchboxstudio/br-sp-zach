@@ -1,0 +1,61 @@
+//****************** FEATURE HEADER *******************
+
+.feature-header{
+	background: $black;
+	width:100%;
+	height:100%;
+	background-repeat:no-repeat;
+	background-position: center center;
+	background-size: cover;
+	overflow: hidden;
+	position: relative;
+
+	img{
+		width:100%;
+		height:100%;
+	}
+	// space man
+    .backup {
+    	display: block;
+    	max-width: 100%;
+    	height: auto;
+    	@include breakpoint($desktop) {
+    		display: none;
+    	}
+    }
+	video {
+		display: none;
+		@include breakpoint($desktop) {
+    	display: block;
+    	height: 100%;
+    	width: 100%;
+    	transform: scale(1.2);
+	   	transform-origin: 30% 50%;
+	   }// bp
+    }// video
+
+    color: $white;
+
+    h2 {
+	  position: absolute;
+	  margin: auto;
+	  left: 52%;
+	  top: 50%;
+	  width: 85%;
+	  transform: translate(-50%, -50%);
+	  z-index: 2;
+	  transform-origin: 50% 50% 0;
+
+
+    	@include breakpoint($phone-landscape) {
+    		//font-size: 2.25rem;
+    		}// bp
+       	@include breakpoint($tablet) {
+    		//font-size: 4.25rem;
+    		}// bp
+    	@include breakpoint($desktop) {
+    		//font-size: 4.25rem;
+    		}// bp
+    }
+
+}

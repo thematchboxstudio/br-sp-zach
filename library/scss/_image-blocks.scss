@@ -1,0 +1,77 @@
+
+/********************
+IMAGE BLOCKS
+********************/
+
+.image-block {
+	position: relative;
+
+	.full-black-button {
+		width: 100%;
+		display: block;
+		background: $red;
+		position: relative;
+		text-align: center;
+		span {
+			@include button($darkred, $red);
+		}
+
+	}
+	&.image-block-border {
+		h2 {
+			position: absolute;
+		}
+		h2 {
+			color: $white;
+
+  position: absolute;
+  margin: auto;
+  left: 40%;
+  top: 50%;
+  transform: translate(-30%, -50%);
+  z-index: 2;
+  transform-origin: 50% 50% 0;
+
+
+			// top: 0;
+			// bottom: 0;
+			// left: 0;
+			// right: 0;
+			// height: 131px;
+			// margin: auto;
+			// width: 68vw;
+			font-weight: 600;
+			letter-spacing: .01em;
+			z-index: 2;
+			span {
+				color: $red;
+			}
+			font-size: 2rem;
+			@include breakpoint($phone-landscape) {
+				font-size: 3rem;
+			}// bp
+			@include breakpoint($tablet) {
+				font-size: 5rem;
+			}// bp
+			@include breakpoint($desktop) {
+				font-size: 6rem;
+			}// bp
+		}
+		.icon-down-arrow {
+			z-index: 2;
+			position: absolute;
+			display: block;
+			bottom: 6rem;
+			left: 48vw;
+			@include hovers(.25s, ease-in-out);
+			&:hover {
+				cursor: pointer;
+				transform: scale(1.25);
+			}
+		}
+		img {
+			border: 10px solid $black;
+		}
+	}
+}
+
