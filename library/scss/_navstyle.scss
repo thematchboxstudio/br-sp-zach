@@ -50,7 +50,14 @@
 
 $trigger-width: 3px;
 
+.trigger-wrap {
+
+
+}
+
 .bt-menu-trigger {
+	//border: 10px solid $black;
+	//background: $black;
 	position: fixed;
 	right: 30px;
 	top: 30px;

@@ -14,7 +14,7 @@ BUTTONS AND FORMS
 		margin-bottom: $margin;
 		background: transparent;
 		border: none;
-		height: 55px;
+		height: 54px;
 		padding-left:15px;
 		border: 4px solid $red;
 	}
@@ -52,7 +52,7 @@ BUTTONS AND FORMS
 	&:hover {
 		background: $red;
 		span {
-			color: $darkred;
+			color: $redhover;
 		}
 	}// hover
 	&:active, &:focus {
@@ -125,17 +125,17 @@ BUTTONS AND FORMS
 	z-index: 10;
 	background: transparent;
 	font-weight: 700;
-	color: $darkred;
+	color: $red;
 	text-decoration: none;
-	border: 4px solid $darkred;
+	border: 4px solid $red;
 	padding: 2px 12px;
 	display: inline-block;
 	margin: 1rem auto;
 	letter-spacing: .05em;
 	@include hovers(.2s);
 	&:hover {
-		background: $darkred;
-		color: $red;
+		background: $red;
+		color: $redhover;
 	}
 }
 
@@ -153,17 +153,20 @@ BUTTONS AND FORMS
 }
 
 /* Button 1b */
+.btn-1b {
+	font-weight: 700;
+}
 .btn-1b:after {
 	width: 100%;
 	height: 0;
 	bottom: 0;
 	left: 0;
-	background: $darkred;
+	background: $red;
 }
 
 .btn-1b:hover,
 .btn-1b:active {
-	color: $red;
+	color: $redhover;
 }
 
 .btn-1b:hover:after,
@@ -174,15 +177,19 @@ BUTTONS AND FORMS
 
 /* Button 1c */
 .btn-1c {
-	border: 4px solid $red;
+	display: block;
+	border: 4px solid $darkred;
+	color: $darkred;
 	font-size: 18px;
-	font-weight: 500;
+	font-weight: 700;
+	@include hovers;
 	&:hover {
 		background: transparent;
-		color: $red;
+		border-color: $darkred;
+		color: $black;
 	}
 	&:active, &:focus {
-		color: $darkred;
+		color: $black;
 		border: 4px solid $darkred;
 		&:after {
 			height: 0;
@@ -193,10 +200,10 @@ BUTTONS AND FORMS
 .btn-1c:after {
 
 	width: 100%;
-	height: 100%;
+	height: 0%;
 	bottom: 0;
 	left: 0;
-	background: $red;
+	background: $darkred;
 }
 
 // .btn-1c:hover,
@@ -206,13 +213,63 @@ BUTTONS AND FORMS
 
 .btn-1c:hover:after,
 .btn-1c:active:after {
+	height: 100%;
+}
+
+/* Button 1d */
+.btn-1d {
+	@include absolute-center;
+	display: block;
+	border: 4px solid $white;
+	color: $white;
+	font-size: 18px;
+	font-weight: 700;
+	@include hovers;
+	&:hover {
+		background: transparent;
+		border-color: $white;
+		color: $black;
+	}
+	&:active, &:focus {
+		color: $black;
+		border: 4px solid $white;
+		&:after {
+			height: 0;
+		}
+	}
+	//background: $red;
+}
+.btn-1d:after {
+
+	width: 100%;
 	height: 0%;
+	bottom: 0;
+	left: 0;
+	background: $white;
+}
+
+// .btn-1c:hover,
+// .btn-1c:active {
+// 	color: $darkred;
+// }
+
+.btn-1d:hover:after,
+.btn-1d:active:after {
+	height: 100%;
 }
 
 
 
+.full-button-wrap {
+	background: $red;
 
+	&.nbc {
+		position: relative;
+		min-height: 126px;
+		background: url('../img/full-width-nbc.jpg') no-repeat scroll center top #a6c3ca;
+	}
 
+}
 
 
 
@@ -280,5 +337,8 @@ BUTTONS AND FORMS
   	opacity: 1;
 	color: $text-color;
 	font-size: 20px;
+	@include breakpoint(1350px){
+  		text-indent: 85%;
+  		}
 	//line-height: 1;
 }

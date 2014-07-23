@@ -7,7 +7,7 @@ CASE STUDY INDEX
 ********************/
 
 .case-study-index {
-	min-height: $section-height;
+	//min-height: $section-height;
 	max-width: $site-width;
 	width: 100%;
 	margin: 0 auto;
@@ -16,7 +16,7 @@ CASE STUDY INDEX
 		@include rem-fallback(font-size, 2.5);
 		text-transform: uppercase;
 		color: $white;
-		font-weight: 300;
+		//font-weight: 300;
 		letter-spacing: .1em;
 	}// h2
 
@@ -40,19 +40,43 @@ CASE STUDY INDEX
 }
 
 .overlay{
+	display: none;
+	@include breakpoint($tablet) {
+	display: block;
     position: absolute;
     width:100%;
     height:100%;
     opacity: 0;
-    //background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0d…0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2xlc3NoYXQtZ2VuZXJhdGVkKSIgLz48L3N2Zz4=);
-    // background-image: -webkit-linear-gradient(top,#37B34A 0,#00B495 100%);
-    // background-image: -moz-linear-gradient(top,#37B34A 0,#00B495 100%);
-    // background-image: -o-linear-gradient(top,#37B34A 0,#00B495 100%);
-    // background-image: linear-gradient(to bottom,#37B34A 0,#00B495 100%);
-    background-color:red;
+    z-index: 3;
+    background-color: transparentize($black, .23);
     @include transition(opacity, 0.35s, ease-in-out);
+    }// bp
+
+    p {
+    	display: none;
+
+    	@include breakpoint($desktop) {
+	    	display: block;
+	    	color: $text-color;
+			font-size: 18px;
+			max-width: 45%;
+			position: absolute;
+			bottom: 10%;
+			margin: 0;
+	    	strong {
+	    		color: $red;
+	    	}
+	    	.cs-full & {
+	    		max-width: 20%;
+	    	}
+    	}// bp
+    }// p
+
+
 
 }
+
+
 
 .overlay-text{
     color: $white;
@@ -64,14 +88,15 @@ CASE STUDY INDEX
     height: 100%;
     text-align: center;
     display: inline-block;
-    margin-top: -30px;
-    top: 50%;
-    margin-left: -5px;
+
     @include transition(opacity, 0.35s, ease-in-out);
-    @include rem-fallback(font-size, 2.5);
-    @include breakpoint($tablet, $no-query: '.no-mediaqueries') {
-        margin-top: -47px;
-        @include rem-fallback(font-size, 3.5);
+    font-size: 2.5rem;
+    @include breakpoint($desktop) {
+    	margin-top: -47px;
+    	top: 50%;
+    	margin-left: -5px;
+        margin-top: -46px;
+        font-size: 3.5rem;
     }
 }
 
@@ -79,19 +104,143 @@ CASE STUDY INDEX
 
 
 
-.cs-intro {
-	width: 100%;
-	position: relative;
-	background: $black;
-	float: left;
-	height: 0;
-	padding-bottom: 45%;
-	padding-top: 5%;
-	padding-left: 5%;
+.case-study {
+	&.cs-full {
+		width: 100%;
+		@include breakpoint($tablet) {
+			width: 50%;
+		}
+		@include breakpoint($desktop) {
+			width: 100%;
+		}
+	}
+	&.cs-half {
+		width: 100%;
+		@include breakpoint($tablet) {
+			width: 50%;
+		}
+	}
+
+
+
+	&.nbc svg {
+		width: 244px; height: 137px;
+		transform: scale(.6);
+		margin-top: 30px;
+		@include breakpoint($tablet) {
+			margin-top: 51px;
+			//margin-top: -14px;
+			//transform: scale(1);
+			}// bp
+		@include breakpoint($desktop) {
+			margin-top: -14px;
+			transform: scale(1);
+		}
+	}
+	&.syfy .overlay-text img {
+		margin-top: 56px;
+		width: 175px;
+		display: inline-block;
+		transform: scale(.9);
+		@include breakpoint($tablet) {
+			margin-top: 80px;
+		}
+		@include breakpoint($desktop) {
+			margin-top: 0;
+			transform: scale(1);
+			}// bp
+	}
+	&.history svg {
+		margin-top: 45px;
+		width: 122px;
+		height: 98px;
+		transform: scale(.9);
+		@include breakpoint($tablet) {
+			margin-top: 62px;
+		}
+		@include breakpoint($desktop) {
+			margin-top: 0;
+			transform: scale(1);
+			}// bp
+	}
+	&.travel .overlay-text img {
+		width: 175px;
+		margin-top: 50px;
+		display: inline-block;
+		@include breakpoint($tablet) {
+			margin-top: 82px;
+		}
+		@include breakpoint($desktop) {
+			margin-top: 0;
+			}// bp
+	}
+	&.food svg {
+		width: 127px;
+		height: 127px;
+		margin-top: 35px;
+		@include breakpoint($tablet) {
+			margin-top: 57px;
+		}
+		@include breakpoint($desktop){
+			margin-top: -14px;
+		}// bp
+	}
+	&.npr svg {
+		width: 252px;
+		height: 80px;
+		transform: scale(.6);
+		margin-top: 55px;
+		@include breakpoint($tablet) {
+			margin-top: 72px;
+		}
+		@include breakpoint($desktop) {
+			margin-top: 0;
+			transform: scale(1);
+			}// bp
+	}
+	&.bmw .overlay-text img {
+		width: 225px;
+		transform: scale(.6);
+		margin-top: -15px;
+		display: inline-block;
+		@include breakpoint($tablet) {
+			margin-top: 12px;
+		}
+		@include breakpoint($desktop) {
+			margin-top: -50px;
+			transform: scale(1);
+		}
+	}
+	&.showtime svg {
+		width: 343px;
+		height: 123px;
+		transform: scale(.6);
+		margin-top: 30px;
+		@include breakpoint($tablet) {
+			margin-top: 55px;
+		}
+		@include breakpoint($desktop) {
+			margin-top: 0;
+			transform: scale(1);
+			}// bp
+	}
+	svg, .overlay-text img { // the logo
+		//transform: scale(.5);
+		@include breakpoint($tablet){
+			//transform: scale(1);
+		}
+	}
+
+	&.cs-half .overlay, &.cs-quarter .overlay, &.cs-full .overlay {
+		width: 100%;
+		padding-bottom: 45%;
+		padding-top: 10%;
+		padding-left: 10%;
+		padding-right: 10%;
 
 	h1 {
 		font-size: 2rem;
-		font-weight: 700;
+		font-weight: 900;
 		line-height: 1;
 		@include breakpoint($phone-landscape) {
 			font-size: 2.75rem;
@@ -101,21 +250,21 @@ CASE STUDY INDEX
 		}
 		@include breakpoint($desktop) {
 			//font-size: 3.25rem;
-		}
-	}
+			}
+		}// h1
 	.icon-right-arrow {
 		margin-top: 10px;
-	}
+		}
 	button {
 		position: absolute;
-		bottom: 15%;
-		right: 5%;
+		bottom: 15vw;
+		right: 5vw;
 		margin: 0;
 		color: $red;
 		border-color: $red;
 
 		&:hover {
-			color: $darkred;
+			color: $black;
 			border-color: $red;
 
 			&:after {
@@ -125,11 +274,30 @@ CASE STUDY INDEX
 		@include breakpoint(527px) {
 			right: auto;
 			bottom: 10%;
+			}
+		}// button
+
+	}// overlays
+	&.cs-full .overlay {
+		@include breakpoint($desktop) {
+			padding-top: 5%;
+			padding-left: 5%;
 		}
-	}// button
-	@include breakpoint($tablet) {
-		width: 50%;
 	}
+	&.cs-quarter .overlay {
+		@include breakpoint($desktop) {
+			padding-bottom: 45%;
+			//padding-top: 2vw;
+			//padding-left: 2vw;
+		h1 {
+			font-size: 2.5rem;
+			font-weight: 900;
+			line-height: 1;
+			}
+		}// bp
+
+	}
+
 
 }// cs-intro
 
@@ -147,13 +315,13 @@ CASE STUDY INDEX
 }// case-studies
 
 .case-study {
-	overflow:hidden;
-	display:block;
-	position:relative;
-	width:100%;
-	height:auto;
+	overflow: hidden;
+	display: block;
+	position: relative;
+	width: 100%;
+	height: auto;
 	max-height: 200px;
-	float:left;
+	float: left;
 	list-style-type: none;
 
 	@include breakpoint($tablet) {
@@ -170,14 +338,13 @@ CASE STUDY INDEX
 	.overlay-text{
 		opacity: 1;
 		vertical-align: middle;
-		z-index: 3;
+		//z-index: 3;
 	}
 	&:hover{
 
-
 		.overlay{
-			//opacity: 1;
-			//color: $red;
+			opacity: 1;
+			//background: $black;
 		}
 
 		&:after {
@@ -191,18 +358,26 @@ CASE STUDY INDEX
 
 	&:after {
 		@include breakpoint($desktop) {
-		content: '';
-		position: absolute;
-		z-index: 2;
-		-webkit-transition: all 0.4s ease-in-out;
-		-moz-transition: all 0.4s ease-in-out;
-		transition: all 0.4s ease-in-out;
-		width: 100%;
-		height: 0;
-		bottom: 0;
-		left: 0;
-		background: $red;
-		opacity: 0;
+		// content: '';
+		// position: absolute;
+		// z-index: 2;
+		// -webkit-transition: all 0.4s ease-in-out;
+		// -moz-transition: all 0.4s ease-in-out;
+		// transition: all 0.4s ease-in-out;
+		// width: 100%;
+		// height: 0;
+		// bottom: 0;
+		// left: 0;
+		// background: $red;
+		// opacity: 0;
 		}// bp
 		}
 }// case-studies a
+
+
+
+
+
+
+
+

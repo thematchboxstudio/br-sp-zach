@@ -108,13 +108,48 @@ $( "a, form button" ).click(function( event ) {
 	 	autoplay: false,
 	 	dots: true,
 	 	arrows: true,
-	 	infinite: false
+	 	infinite: true,
+
 	});
+	 $('.slider .slick-next').on('click', function(){
+	 	var total = $('.slider .slick-slide').length;
+		var current = $('.slider .slick-active').text();
+		$('.slider .counter em').text(total);
+		$('.slider .counter strong').text(current);
+	 });
+	 $('.slider .slick-prev').on('click', function(){
+	 	var total = $('.slider .slick-slide').length;
+		var current = $('.slider .slick-active').text();
+		$('.slider .counter em').text(total);
+		$('.slider .counter strong').text(current);
+	 });
 $('.slider .slick-next, .slider .slick-prev').addClass('icon-large-r-w-arrow');
 
+$('.slider2').slick({
+	dots: true,
+	autoplay: false,
+	infinite: false,
+	speed: 500,
+	//fade: true,
+	arrows: true,
+	//slide: '> div',
+  	cssEase: 'ease'
+	});
+
+var total = $('.slider .slick-slide').length;
+var current = $('.slider .slick-active').text();
+
+$('.slider .counter em').text(total);
+$('.slider .counter strong').text(current);
 
 
+function updateCount() {
+	$('.slider .counter em').text(total);
+	$('.slider .counter strong').text(current);
+}
 
+$('.slider2 .slick-next, .slider2 .slick-prev').addClass('icon-r-arrow-smaller');
+$('.slider2 .slick-dots').appendTo('.slide-content-wrap')
 
 
 // $(window).scroll(function () {
@@ -263,13 +298,14 @@ var queries = [	{
 		player.setAttribute('class', value);
 
 
-		///////////////////////CIRCLES!!!!!!!!!!!!!!!!!!!!!
+		// ///////////////////////CIRCLES!!!!!!!!!!!!!!!!!!!!!
 		(function(){
 			var canvas = document.querySelector('canvas');
 		    var stage, textStage, form, input;
 		    var circles, textPixels, textFormed;
 		    var offsetX, offsetY, text;
-		    var colors = ['#f8222f', '#ff2532', '#fe212e', '#ff3743'];
+		    var colors = ['#303030'];
+		    //var colors = ['#f8222f', '#ff2532', '#fe212e', '#ff3743', '#ff222c', '#d00909'];
 
 		    function init() {
 		        initStages();
@@ -291,7 +327,7 @@ var queries = [	{
 		    }
 		    function initCircles() {
 		        circles = [];
-		        for(var i=0; i<155; i++) {
+		        for(var i=0; i<200; i++) {
 		            var circle = new createjs.Shape();
 		            var r = 15*Math.random();
 		            var x = window.innerWidth*Math.random();
@@ -357,8 +393,95 @@ var queries = [	{
 				//Initial call
 				respondCanvas();
 		    window.onload = function() { init() };
-		})();
+		})();// circles
 
+
+		///////////////////////CIRCLES 22222222!!!!!!!!!!!!!!!!!!!!!
+		(function(){
+			var canvas = document.querySelector('canvas');
+		    var stage2, textStage, form, input;
+		    var circles, textPixels, textFormed;
+		    var offsetX, offsetY, text;
+		    var colors = ['#f8222f', '#ff2532', '#fe212e', '#ff3743', '#ff222c', '#d00909'];
+
+		    function init() {
+		        initStages();
+		        initCircles();
+		        animate();
+		    }
+		    // Init Canvas
+		    function initStages() {
+		        stage = new createjs.Stage("stagetwo");
+		    }
+		    function initCircles() {
+		        circles = [];
+		        for(var i=0; i<155; i++) {
+		            var circle = new createjs.Shape();
+		            var r = 15*Math.random();
+		            var x = window.innerWidth*Math.random();
+		            var y = window.innerHeight*Math.random();
+		            var color = colors[Math.floor(i%colors.length)];
+		            var alpha = 0.2 + Math.random()*0.5;
+		            circle.alpha = alpha;
+		            circle.radius = r;
+		            circle.graphics.beginFill(color).drawCircle(0, 0, r);
+		            circle.x = x;
+		            circle.y = y;
+		            circles.push(circle);
+		            stage.addChild(circle);
+		            circle.movement = 'float';
+		            tweenCircle(circle);
+		        }
+		    }
+		    // animating circles
+		    function animate() {
+		        stage.update();
+		        requestAnimationFrame(animate);
+		    }
+		    function tweenCircle(c, dir) {
+		        if(c.tween) c.tween.kill();
+		        if(dir == 'in') {
+		            c.tween = TweenLite.to(c, 0.4, {x: c.originX, y: c.originY, ease:Quad.easeInOut, alpha: 1, radius: 5, scaleX: 0.4, scaleY: 0.4, onComplete: function() {
+		                c.movement = 'jiggle';
+		                tweenCircle(c);
+		            }});
+		        } else if(dir == 'out') {
+		            c.tween = TweenLite.to(c, 0.8, {x: window.innerWidth*Math.random(), y: window.innerHeight*Math.random(), ease:Quad.easeInOut, alpha: 0.2 + Math.random()*0.5, scaleX: 1, scaleY: 1, onComplete: function() {
+		                c.movement = 'float';
+		                tweenCircle(c);
+		            }});
+		        } else {
+		            if(c.movement == 'float') {
+		                c.tween = TweenLite.to(c, 5 + Math.random()*3.5, {x: c.x + -100+Math.random()*200, y: c.y + -100+Math.random()*200, ease:Quad.easeInOut, alpha: 0.2 + Math.random()*0.5,
+		                    onComplete: function() {
+		                        tweenCircle(c);
+		                    }});
+		            } else {
+		                c.tween = TweenLite.to(c, 0.05, {x: c.originX + Math.random()*3, y: c.originY + Math.random()*3, ease:Quad.easeInOut,
+		                    onComplete: function() {
+		                        tweenCircle(c);
+		                    }});
+		            }
+		        }
+		    }
+		    //make canvas site responsive
+			//Get the canvas & context
+		  		var c = $('#stagetwo');
+		  		var ct = c.get(0).getContext('2d');
+		  		var container = $(c).parent();
+
+		  		//Run function when browser  resize
+			  	$(window).resize( respondCanvas );
+
+			  	function respondCanvas(){
+		  			c.attr('width', $(container).width() ); //max width
+		  			c.attr('height', $(container).height() ); //max height
+					init();
+		 		}
+				//Initial call
+				respondCanvas();
+		    window.onload = function() { init() };
+		})();// circles 2
 
 		console.log('entering desktop');
 
@@ -542,50 +665,50 @@ jQuery('textarea').leSlide({
 
 
 
-/*global jQuery */
-/*!
-* FitText.js 1.2
-*
-* Copyright 2011, Dave Rupert http://daverupert.com
-* Released under the WTFPL license
-* http://sam.zoy.org/wtfpl/
-*
-* Date: Thu May 05 14:23:00 2011 -0600
-*/
+// /*global jQuery */
+// /*!
+// * FitText.js 1.2
+// *
+// * Copyright 2011, Dave Rupert http://daverupert.com
+// * Released under the WTFPL license
+// * http://sam.zoy.org/wtfpl/
+// *
+// * Date: Thu May 05 14:23:00 2011 -0600
+// */
 
-(function( $ ){
+// (function( $ ){
 
-  $.fn.fitText = function( kompressor, options ) {
+//   $.fn.fitText = function( kompressor, options ) {
 
-    // Setup options
-    var compressor = kompressor || 1,
-        settings = $.extend({
-          'minFontSize' : Number.NEGATIVE_INFINITY,
-          'maxFontSize' : Number.POSITIVE_INFINITY
-        }, options);
+//     // Setup options
+//     var compressor = kompressor || 1,
+//         settings = $.extend({
+//           'minFontSize' : Number.NEGATIVE_INFINITY,
+//           'maxFontSize' : Number.POSITIVE_INFINITY
+//         }, options);
 
-    return this.each(function(){
+//     return this.each(function(){
 
-      // Store the object
-      var $this = $(this);
+//       // Store the object
+//       var $this = $(this);
 
-      // Resizer() resizes items based on the object width divided by the compressor * 10
-      var resizer = function () {
-        $this.css('font-size', Math.max(Math.min($this.width() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
-      };
+//       // Resizer() resizes items based on the object width divided by the compressor * 10
+//       var resizer = function () {
+//         $this.css('font-size', Math.max(Math.min($this.width() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
+//       };
 
-      // Call once to set.
-      resizer();
+//       // Call once to set.
+//       resizer();
 
-      // Call on resize. Opera debounces their resize by default.
-      $(window).on('resize.fittext orientationchange.fittext', resizer);
+//       // Call on resize. Opera debounces their resize by default.
+//       $(window).on('resize.fittext orientationchange.fittext', resizer);
 
-    });
+//     });
 
-  };
-$("#fittext1").fitText(1.2);
-		$("#fittext3").fitText(1.1, { minFontSize: '50px', maxFontSize: '75px' });
-})( jQuery );
+//   };
+// $("#fittext1").fitText(1.2);
+// 		//$("#fittext2").fitText(1.1, { minFontSize: '30px', maxFontSize: '200px' });
+// })( jQuery );
 
 
 

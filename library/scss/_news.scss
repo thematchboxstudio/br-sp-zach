@@ -1,0 +1,92 @@
+/********************
+NEWS
+********************/
+
+.news-article {
+	padding: $margin2x $margin2x $margin3x;
+
+	.date-wrap {
+		@include breakpoint($tablet) {
+		width: 30%;
+		}// bp
+	}
+	.date {
+
+
+		color: $red;
+		font-weight: 900;
+		font-size: 32px;
+		border: 4px solid $red;
+		padding: $marginhalf;
+		display: block;
+		width: 100%;
+		line-height: 1;
+		text-align: center;
+
+		@include breakpoint($tablet) {
+			max-width: 123px;
+			height: auto;
+			padding: 1.25rem;
+			float: right;
+			margin-top: 0;
+			}// bp
+	}
+	.news-copy {
+		@include breakpoint($tablet) {
+			width: 58%;
+			float: left;
+		}// bp
+		padding-right: $margin;
+		button {
+			display: block;
+			clear: both;
+			margin: 0 auto;
+			margin-top: $margin2x;
+			@include breakpoint($tablet) {
+				margin-top: $margin3x;
+				float: left;
+
+			}
+		}
+	}
+
+
+
+
+	h1 {
+		font-weight: 700;
+		line-height: 1;
+		margin-top: -6px;
+	}
+	p {
+		font-size: 18px;
+	}
+	img {
+		display: inline-block;
+		vertical-align:middle;
+		margin-right: 10px;
+	}
+	strong {
+		vertical-align: middle;
+		display: inline-block;
+	}
+	em {
+		font-weight: normal;
+		font-style: italic;
+		vertical-align: middle;
+		display: inline-block;
+	}
+	.user {
+		float: left;
+		height: 77px;
+		display: inline-block;
+		color: $red;
+		margin: $margin 0 $margin;
+	}
+
+	@include breakpoint($tablet) {
+		padding: $margin7x 0 $margin7x;
+		}// bp
+
+
+}// news-article

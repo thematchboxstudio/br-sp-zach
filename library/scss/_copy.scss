@@ -5,19 +5,44 @@ COPY STYLES
 
 .copy{
 	min-height: 350px;
-	padding: 5em 0;
+	//padding: 5em 0;
+	margin-bottom: 610px;
 
 	.fourcol{
 		margin-top:37px;
 	}
 	.wrap {
 		height: 15vh;
+		.plus:first-child {
+			margin-bottom: 30px;
+		}
+		.plus:last-child {
+			margin-top: 30px;
+		}
 	}
 	h1 {
 		text-align: center;
+		line-height: 1;
 	}
 	p {
 		text-align: center;
 		line-height: 2;
+		font-size: 18px;
 	}
+	@include breakpoint(595px) {
+		margin-bottom: 450px;
+		}// bp
+	@include breakpoint($tablet-portrait){
+		margin-bottom: 425px;
+	}
+	@include breakpoint($tablet) {
+		padding: 5em 0;
+		margin-bottom: 300px;
+		.wrap .plus:first-child {
+			margin-bottom: 0;
+		}
+		.wrap .plus:last-child {
+			margin-top: 50px;
+		}
+	}// bp
 }

@@ -113,15 +113,23 @@ LAYOUT & GRID STYLES
 *********************/
 
 .wrap {
+
 	margin: 0 auto;
 	width: 96%;
 
-	@include breakpoint($tablet, $no-query: '.no-mediaqueries') {
+	@include breakpoint($tablet) {
 		max-width: $site-width;
 		}// * BP
 
 	}// wrap
+.desktop-wrap {
+	@include breakpoint($desktop) {
+		margin: 0 auto;
+		width: 96%;
+		max-width: $site-width;
+		}// * BP
 
+	}// wrap
 /*********************
 LINK STYLES
 *********************/
@@ -165,21 +173,37 @@ POSTS & CONTENT STYLES
 
 .plus {
 	//width: 56px;
-	height: 100%;
-	min-height: 56px;
-	background: url('../img/red-plus.png') no-repeat scroll center center transparent;
+	//height: 100%;
+	height: 58px;
+	min-width: 58px;
+	margin-top: 50px;
+	&.red {
+		background: url('../img/red-plus.png') no-repeat scroll center center transparent;
+	}
+	&.white {
+		background: url('../img/white-plus.png') no-repeat scroll center center transparent;
+	}
+	.feature-header & {
+		width: 58px;
+		 position: absolute;
+		 z-index: 1000000;
+		 left: 0;
+		 right: 0;
+		 margin: 5% auto 0;
+		// top: 10%
+	}
+	&.bottom {
+		 margin: 0 auto 5%;
+		 bottom: 0;
+
+	}
+
 }
 
 
 
 
 
-/********************
-NEWS
-********************/
-.news-article{
-	padding: 5em 0;
-}
 
 
 

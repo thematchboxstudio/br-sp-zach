@@ -13,6 +13,12 @@
     animation-fill-mode: both;
 	}// bp
 }
+.fast{
+    @include breakpoint($tablet) {
+    animation-duration: .5s;
+    animation-fill-mode: both;
+    }// bp
+}
 .slow{
 	@include breakpoint($tablet) {
     animation-duration: 1.5s;
@@ -45,7 +51,12 @@
     }// bp
 }
 
-
+.fadeInRight {
+    @include breakpoint($tablet) {
+    opacity:0;
+    transform: translateX(400px);
+    }//
+}
 
 /**********
 * Fade In *
@@ -70,7 +81,16 @@
     animation-name: fadeIn;
     }// bp
 }
-
+.fadeIn.fast.go {
+        @for $i from 2 through 4 {
+       &:nth-of-type(#{$i}) {
+            animation-delay: #{$i*.15s};
+       }
+    }
+    &:nth-of-type(1) {
+        animation-delay: .2s;
+    }
+}
 
 
 /*************
@@ -114,6 +134,75 @@
     animation-name: fadeInUp;
 	}// BP
 }
+
+
+@keyframes growIn {
+    0% {
+        transform: scale(0.2);
+        opacity:0;
+    }
+    50% {
+        transform: scale(1.2);
+
+    }
+    100% {
+        transform: scale(1);
+        opacity:1;
+    }
+}
+.growIn {
+
+    -webkit-transform: scale(0.2);
+    transform: scale(0.2);
+    opacity:0;
+}
+.growIn.go{
+    -webkit-animation-name: growIn;
+    animation-name: growIn;
+    @for $i from 2 through 4 {
+       &:nth-of-type(#{$i}) {
+            animation-delay: #{$i*.15s};
+       }
+    }
+    &:nth-of-type(1) {
+        animation-delay: .2s;
+    }
+}
+
+
+
+
+
+/*************
+* FadeInRight *
+*************/
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 1;
+        transform: translateX(700px);
+    }
+    50%{
+       //opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.fadeInRight{
+    opacity: 0;
+    transform: translateX(700px);
+}
+.fadeInRight.go {
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight;
+    animation-delay: .5s;
+}
+
+
+
+
 
 
 

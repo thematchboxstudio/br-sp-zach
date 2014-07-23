@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>bottle rocket style prototype</title>
+        <title>1</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.3.6/slick.css"/>
@@ -21,23 +21,25 @@
 
         <nav id="bt-menu" class="bt-menu" style="z-index: 999999;">
             <a href="#" class="bt-menu-trigger"><span>Menu</span></a>
-            <ul>
+<!--             <ul>
                 <li><a class="nav-item-one" href="#">About Us</a></li>
                 <li><a class="nav-item-two" href="#">Work</a></li>
                 <li><a class="nav-item-three" href="#">Clients</a></li>
                 <li><a class="nav-item-four" href="#">Blog</a></li>
                 <li><a class="nav-item-five" href="#">Contact</a></li>
-            </ul>
+            </ul> -->
         </nav>
 
         <!-- //*************************************** FEATURE HEADER -->
         <div class="section feature-header animatedParent animateOnce">
-            <h2 id="fittext1" class="animated fadeIn slowestest">Who said the sky is the <em>limit</em>?</h2>
+            <div class="plus white animated fadeIn slowest"></div>
+            <h2 id="fittext1" class="animated fadeIn slowestest">who said<br>the sky's<br>the limit?</h2>
+            <div class="plus white bottom animated fadeIn slowest"></div>
+
             <video autoplay loop data-origin-y="50" data-origin-x="30" poster="" id="player">
                 <source src="library/img/test.webm" type="video/webm">
-                <source src="library/img/test.mp4" type="video/mp4">
+                <source src="library/img/vid.mp4" type="video/mp4">
             </video>
-            <img class="backup" src="library/img/space-backup.jpg" />
         </div>
 
 
@@ -46,11 +48,11 @@
             <canvas id="stage"></canvas>
             <ul class="twelvecol first clearfix animatedParent animateOnce">
                 <li class="animated fadeInUp icons-first icon icon-rocket icon-rocket-dims"></li>
-                <li class="animated fadeInUp icons-first icon icon-br-logo icon-br-logo-dims"></li>
+                <li class="animated fadeInUp icons-first icon icon-br-large icon-br-logo-dims"></li>
                 <li class="animated fadeInUp icons-first icon icon-space-thing icon-space-thing-dims"></li>
                 <li class="animated fadeInUp icons-first icon icon-helmet icon-helmet-dims"></li>
-                <li class="animated fadeInUp icons-first icon icon-telescope icon-telescope-dims"></li>
-            </ul>
+<!--                 <li class="animated fadeInUp icons-first icon icon-telescope icon-telescope-dims"></li>
+ -->            </ul>
             <ul class="icons-second twelvecol first clearfix animatedParent animateOnce ">
                 <li class="animated fadeIn slow icons-second icon icon-facebook icon-facebook-dims"></li>
                 <li class="animated fadeIn slow icons-second icon icon-twitter icon-twitter-dims"></li>
@@ -60,137 +62,260 @@
 
         <!-- //*************************************** BUTTONS AND FORMS -->
         <div class="section buttons forms clearfix">
-            <div class="wrap eightcol clearfix forms-wrap animatedParent animateOnce">
-                <div class="fivecol first button-one-wrap clearfix animated fadeIn slower">
-                     <div class="button-one clearfix">
+            <div class="wrap eightcol clearfix forms-wrap">
+                <div class="animatedParent animateOnce fivecol first button-one-wrap clearfix">
+                     <div class="button-one clearfix animated fadeIn slower">
                         <span>Explore</span>
                         <a href="#" class="icon-r-arrow-btn">explore</a>
                     </div>
-                    <button class="btn btn-1 btn-1c">Read More</button>
-                </div>
-                <div class="fivecol last button-two-wrap animated fadeIn slower">
-                    <form class="">
+                    <button class="btn btn-1 btn-1b animated fadeIn slower">Read More</button>
+
+                <div class="twelvecol first" style="clear: left;">
+                    <img class="animated fadeIn fast" src="library/img/circle-on.png" style="width: 33px; height: 33px;float: left;margin-right: 10px;" />
+                    <img class="animated fadeIn fast" src="library/img/circle-off.png" style="width: 9px;height: 9px;margin-top: 11px;float: left;display: block;margin-right: 10px;" />
+                    <img class="animated fadeIn fast" src="library/img/circle-off.png"  style="width: 9px;height: 9px;margin-top: 11px;float: left;display: block;margin-right: 10px;" />
+                    <img src="library/img/down-arrow.png" style="margin-top: -2px;float: right;width: 35px;" class="animated fadeIn fast icon-right-arrow-png" />
+                </div><!-- circles -->
+
+                </div><!-- button-one-wrap -->
+
+                <div class="fivecol last button-two-wrap animatedParent animateOnce ">
+                    <form class="animated fadeIn slower">
                         <input class="name-form" type="text" placeholder="First"></br>
                         <input class="name-form" type="text" placeholder="Last" style="margin-bottom: 0;">
-                        <button class="btn btn-1 btn-1c">Submit</button>
+                        <button class="btn btn-1 btn-1b">Submit</button>
                     </form>
                 </div>
             </div>
-        </div>
+        </div><!-- section -->
 
 
 
        <!-- //*************************************** CASE STUDY INDEX -->
-        <div class="section case-study-index animatedParent animateOnce">
+        <div class="section case-study-index animatedParent animateOnce clearfix">
 
-            <div class="cs-intro first animated fadeIn slower">
-                <h1>Watch NBC<br>Mobile</h1>
-                <i class="icon-right-arrow">right arrow</i>
-        <button class="btn btn-1 btn-1b">Launch All Work.</button>
-
-            </div><!-- cs-intro -->
-
-
-            <ul class="clearfix case-studies">
-
-                <a href="#" class="case-study animated fadeIn slower">
-                    <div class="overlay-text">
-                        Project Title
-                    </div>
+            <a href="#" class="case-study cs-half animated fadeIn slower nbc">
                     <li>
-                        <div class="overlay"></div>
+                        <div class="overlay-text">
+                            <svg style="" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        viewBox="0 0 243.8 136.3" enable-background="new 0 0 243.8 136.3" xml:space="preserve">
+        <g><g><path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M104.6,135.4l-83.2-0.3c0,0-23.7-2.7-19.1-30.2
+                    c0,0,5.3-23.4,27.7-19.9c0,0,8,1,23.1,13.5L104.6,135.4z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M105.5,129.7L34.5,78.2c0,0-15-11.4-5.4-33.2
+                    c0,0,5.1-11.9,20.8-12.3c0,0,17-0.5,22.8,16.8L105.5,129.7z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M139.2,134.4l83.2-0.3c0,0,23.7-2.7,19.1-30.2
+                    c0,0-5.3-23.4-27.7-19.9c0,0-8,1-23.1,13.5L139.2,134.4z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M138.3,128.7l70.9-51.5c0,0,15-11.4,5.4-33.2
+                    c0,0-5.1-11.9-20.8-12.3c0,0-15.8-0.5-22.8,16.8L138.3,128.7z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M106.8,120.2L71.2,34.1c0,0-6.2-14.5,9-27.6
+                    c0,0,17.2-12.9,29.5,0.7c0,0,11.4,11,6.1,44.5L106.8,120.2z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M136.8,120.1l-11.1-74.8c0,0-1.9-9.1,8.8-14.8l-10.3-1.3
+                    c0,0-1.9-24.3,21.7-28.2c0,0,18.2-2.8,25.6,18.2c0,0,3,8.5-4.4,25.3L136.8,120.1z"/></g></g></svg>
+                        </div>
+                        <div class="overlay">
+                            <h1>Watch NBC<br>Mobile</h1>
+                            <i class="icon-right-arrow">right arrow</i>
+                            <p><strong>Lorem ipsum dolor sit amet,</strong> consectetur adipiscing elit. Fusce ultricies commodo sem a laoreet.Aenean sed sagittis mauris. Nunc dignissim sem eget justo adipiscing, vitae tincidunt risus porttitor.</p><!--                             <button class="btn btn-1 btn-1b">Launch All Work.</button>
+ -->
+                    </div>
+                        <img src="library/img/cs/cs-nbc-large.jpg">
+                    </li>
+                </a>
+
+            <ul class="clearfix case-studies four">
+
+                <a href="#" class="syfy case-study cs-quarter animated fadeIn slower">
+                    <li>
+                        <div class="overlay-text">
+                            <img style="" src="library/img/syfy-logo.png" />
+                        </div>
+                        <div class="overlay">
+                            <h1>Watch SyFy<br>Mobile</h1>
+                            <i class="icon-right-arrow">right arrow</i>
+<!--                             <button class="btn btn-1 btn-1b">Launch All Work.</button>
+ -->                        </div>
                         <img src="library/img/cs/cs-scifi.jpg">
                     </li>
                 </a>
-                <a href="#" class="case-study animated fadeIn slower">
-                    <div class="overlay-text">
-                        Project Title
-                    </div>
+                <a href="#" class="history case-study cs-quarter red animated fadeIn slower">
                     <li>
-                        <div class="overlay"></div>
-                        <img src="library/img/cs/cs-scifi.jpg">
+                        <div class="overlay-text">
+                        <svg style="" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     viewBox="0 0 121.6 98" enable-background="new 0 0 121.6 98" xml:space="preserve">
+<g><path fill="#FFFFFF" d="M14.7,64.3v16.9l8.6-8.2L14.7,64.3z M3.1,92.3l8-7.6V60.6l-8-8V92.3z"/><polygon fill="#FFFFFF" points="110.3,88 13.5,88 6.1,95.6 118.6,95.6    "/><polygon fill="#FFFFFF" points="97.7,10.9 108.4,2.6 67.9,2.6 78.7,11.3 78.7,29.6 78.7,29.6 50.7,29.6 50.7,11.4 61.4,2.6
+        61.4,2.6 21,2.6 42,10.2 42,10.1 21.2,2.5 31.7,10.8 31.7,74.4 21.2,82.9 42.1,75.2 42,75.1 21,82.6 61.4,82.6 50.7,73.9
+        50.7,45.4 42,36.4 50.7,45.5 78.8,45.5 78.9,74 67.9,82.8 87.7,75.1 87.7,75.1 67.9,82.8 108.2,82.9 97.7,74.4  "/></g></svg>
+                        </div>
+                        <div class="overlay">
+                            <h1>History Channel</h1>
+                            <i class="icon-right-arrow">right arrow</i>
+<!--                             <button class="btn btn-1 btn-1b">Launch All Work.</button>
+ -->                        </div>
+                        <img src="library/img/cs/cs-red.jpg">
                     </li>
                 </a>
-                <a href="#" class="case-study animated fadeIn slower">
-                    <div class="overlay-text">
-                        Project Title
-                    </div>
+                <a href="#" class="travel case-study cs-quarter animated fadeIn slower">
                     <li>
-                        <div class="overlay"></div>
+                        <div class="overlay-text">
+                            <img style="" src="library/img/travel-logo.png" />
+                        </div>
+                        <div class="overlay">
+                            <h1>Travel Channel</h1>
+                            <i class="icon-right-arrow">right arrow</i>
+<!--                             <button class="btn btn-1 btn-1b">Launch All Work.</button>
+ -->                        </div>
                         <img src="library/img/cs/cs-travel.jpg">
                     </li>
                 </a>
-                <a href="#" class="case-study animated fadeIn slower">
-                    <div class="overlay-text">
-                        Project Title
-                    </div>
+                <a href="#" class="food case-study cs-quarter animated fadeIn slower">
                     <li>
-                        <div class="overlay"></div>
+                        <div class="overlay-text">
+                        <svg style="" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     viewBox="0 0 126.6 126.6" enable-background="new 0 0 126.6 126.6" xml:space="preserve">
+<g>
+    <path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M45.3,52.2c4.9-0.8,4.8,8.1,4.1,12.9c-0.5,3.4-2,10-6.4,9.1
+        c-2.4-0.5-3.1-4.6-3.1-8c0-4.9,1-11.1,3.6-13.2C43.9,52.6,44.6,52.3,45.3,52.2z"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M73.9,52.2c4.2-0.7,4.6,5.4,4.4,9.3c-0.2,3.6-0.8,7.6-2.1,10
+        c-0.7,1.3-2.3,3.2-4.7,2.6c-2.7-0.7-3.2-5.9-3-10.1c0.2-4.1,1.3-8.5,2.8-10.2C71.9,53.1,72.8,52.4,73.9,52.2z"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M107.3,52.6c-0.9,6-1.8,12.7-5,16.5c-0.6,0.7-1.9,2-3.1,1.9
+        c-1.8-0.1-2.2-3.1-2-5.6c0.3-3.9,2.2-8.8,4.7-11.1C103.1,53.1,104.9,52.2,107.3,52.6z"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M53.7,86c-0.9-0.1-2.1,0.1-2.8-0.1C50.8,84,54,83.9,53.7,86z"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M79.3,84.6c1.1,1,1.1,5.4-1.4,4.4C76.7,88,76.6,83.6,79.3,84.6z"
+        />
+    <path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M103.9,37.4c0.1,0.7,0.3,1.1,0.4,1.7c1,0,2.5-0.9,3.8-0.7
+        c0.6,3.9-0.3,8.3-0.7,11.9c-5.3-0.5-10,1.4-13.1,4.6c-3.1,3.1-5.5,7.2-5.9,12.5c-0.3,5.1,1.8,9.7,6.8,9.1c5.1-0.6,8.2-5.8,10.2-9.6
+        c0.3,2.4-1.1,7.4,0.6,9.4c4.8,0.3,8.4-1.6,11.8-3c0-0.7-0.4-1-0.4-1.7c-1.3,0.2-2.5,1.1-3.8,1c-1-1.3-0.4-3-0.2-4.4
+        c1.1-10.3,3-21.6,3.7-32.8c3.3,6.4,6,14,6.7,22.9c0.8,9.8-0.9,18.6-3.6,25.8c-5.2,14.2-14.9,25-27.1,32c-6.3,3.6-13.6,6.2-22.2,7.3
+        c-9.1,1.2-18.6,0-26.2-2.4c-14.8-4.7-25.6-14.2-33-26.1c7.5-2.5,11.4-8.1,12.7-16.6c1.2-8.2,2-17.4,2.9-26c1.6,0,3.1,0,4.7,0
+        c0.2-0.6,0.3-1.3,0.3-2.1c-0.9-0.1-3.1,0-4.7,0c0.6-5.8,1-11.8,4.8-14.5c1,0.9,1.5,2.5,3.1,3c1.8,0.6,4-0.1,4.1-1.9
+        c0.1-2.4-3.1-3.3-5.1-3.3c-4.9-0.2-8.6,2.1-11,5c-2.5,3-3.6,7.1-4.2,11.7c-1.2,0-2.4,0-3.7,0c-0.2,0.6-0.3,1.3-0.3,2
+        c1.4,0.3,2.1,0.1,3.7,0.1c-1.1,9.2-2,20.1-3.4,29.9c-0.6,4.5-1.5,9.2-5,10.7C6.7,86.3,3.9,78.8,3,69.6c-1-9.7,0.4-19.2,3.1-26.7
+        C11.4,28.4,21.5,17,34.2,10c6.6-3.6,14.3-6.3,23.5-7.1c9.5-0.8,19,0.6,26.6,3.4c14.7,5.4,25.5,15.5,32.5,28.5
+        c0.1,0,0.1,0.1,0.2,0.1C112.3,35,107.7,36,103.9,37.4z M40.5,51.5c-4.9,2.5-9.5,8.8-8.9,16.9c0.4,5,3.6,7.6,8.3,8
+        c10.4,0.8,18.3-6.7,18.2-17.7c-0.1-6.7-4.7-9.4-11.8-8.8C43.8,50.2,42,50.7,40.5,51.5z M65.4,54.2c-3,2.9-5.8,8.7-5.1,15
+        C61.2,78,73.9,78,80,73.4c4.3-3.2,7.3-9.3,6.7-15.9c-0.5-5.9-5.3-8.1-11.7-7.6C70.9,50.3,67.6,52,65.4,54.2z M90.9,90.5
+        c0.6,0,1.3,0,1.9,0c-0.1-1.5-0.1-2.8,0.9-3.2c0.4,1.1,1.1,2.1,1.6,3.2c0.6,0,1.3,0,1.9,0c-0.6-1.7-1.6-3-2.2-4.7
+        c0.6-0.9,1.4-1.7,2-2.7c-0.5-0.1-1.2,0.1-2,0c-0.7,0.8-1.4,2.1-2.1,2.6c0-1.8,0-3.6,0-5.4c-0.6,0-1.2,0-1.8,0
+        C91,83.2,91.2,87.8,90.9,90.5z M58.7,83.1c-0.3,0.1-0.4,0.1-1,0.1c0,0.5,0,1,0,1.4c0.3,0.1,0.9-0.1,1,0.1c0,3.1-0.7,7,3.1,5.9
+        c0.2-0.3,0.1-1,0.1-1.6c-0.4,0-1,0.3-1.3,0c-0.1-1-0.2-3.2,0-4.4c0.4,0,0.9,0,1.3,0c0.2-0.6-0.1-0.8,0.1-1.4
+        c-0.5,0-1.2,0.1-1.6-0.1c0-0.8,0-1.6,0-2.3c-0.6,0-1.2,0-1.8,0C58.7,81.5,58.7,82.3,58.7,83.1z M45.7,83.5c-1-1-2.7-0.4-3.9,0.3
+        c0.2-1.2-0.8-0.5-1.7-0.7c0,2.4,0,4.9,0,7.3c0.6,0,1.3,0,1.9,0c0-1.8,0-3.6,0-5.3c0.5-0.4,1-0.8,2-0.7c0.9,1.3,0.3,4,0.4,6
+        c0.6,0,1.2,0,1.8,0C45.8,88.2,47,84.8,45.7,83.5z M49.6,84.5c-2.2,4.1,2.6,8.9,5.8,4.6c-0.5-0.2-0.9-0.6-1.3-0.8
+        c-0.7,1.5-3.4,0.9-3.1-1.1c1.5,0,3,0,4.4,0C56.2,82.8,51,81.9,49.6,84.5z M79.8,90.5c2.3-0.9,2.7-5.8,0.4-7.1
+        c-0.6-0.3-1.3-0.4-2.1-0.3C73.5,83.6,74.9,92.3,79.8,90.5z M88,83c-0.9,0.2-1.5,0.6-1.9,1.3c-0.1-0.4,0.1-1-0.1-1.2
+        c-0.3,0.3-1.1,0-1.6,0.1c0,2.4,0,4.9,0,7.3c0.6,0,1.2,0,1.8,0c0.1-2.5-0.7-5.8,2-5.7C88.1,84.3,88.5,83.2,88,83z M69.5,83.2
+        c-0.4-0.1-1,0.1-1.7,0c-0.4,1.4-0.6,3-1.1,4.3c-0.2-1.5-0.6-2.8-0.9-4.3c-0.6,0-1.2,0-1.8,0c0.6,2.4,1.3,4.9,1.9,7.3
+        c0.6,0,1.1,0,1.7,0c0.4-1.5,0.6-3.1,1.1-4.4c0.2,1.6,0.7,3,1,4.4c0.6,0,1.1,0,1.7,0c0.6-2.5,1.2-4.9,1.9-7.3
+        c-0.9,0.1-1.3-0.1-1.8,0c-0.4,1.4-0.5,3.1-1.1,4.2C70.2,85.9,69.8,84.6,69.5,83.2z"/>
+</g>
+</svg>
+                        </div>
+                        <div class="overlay">
+                            <h1>Food Network</h1>
+                            <i class="icon-right-arrow">right arrow</i>
+<!--                             <button class="btn btn-1 btn-1b">Launch All Work.</button>
+ -->                        </div>
                         <img src="library/img/cs/cs-food.jpg">
                     </li>
                 </a>
              </ul>
 
-                <a href="#" class="case-study animated fadeIn slower">
-                    <div class="overlay-text">
-                        Project Title
-                    </div>
+                <a href="#" class="npr case-study cs-half red animated fadeIn slower">
                     <li>
-                        <div class="overlay"></div>
-                        <img src="library/img/cs/cs-bmw-large.jpg">
+                        <div class="overlay-text">
+                        <svg style="" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     viewBox="0 0 251.5 79.5" enable-background="new 0 0 251.5 79.5" xml:space="preserve"><g><g><g><path fill="#FFFFFF" d="M82.3,1.7v76.1h76.2V1.7H82.3z M133.7,54.8c-3.4,3.4-8.1,5.2-14.1,5.2c-2.9,0-5.5-0.6-7.8-1.7v16.2h-9.1
+                V20.1h9.1v2.6c2.3-2.2,5.1-3.3,8.4-3.3c12.4,0,18.7,6.8,18.7,20.5C138.9,46.4,137.2,51.3,133.7,54.8z"/>
+            <path fill="#FFFFFF" d="M117.6,27.3c-2.2,0-4.1,0.8-5.8,2.5v20.5c1.6,1.3,3.6,2,5.8,2c4.2,0,7.2-1,9-3c1.8-2,2.7-5.2,2.7-9.5
+                c0-4.6-0.9-7.8-2.7-9.7C124.8,28.2,121.8,27.3,117.6,27.3z"/>
+        </g><path fill="#FFFFFF" d="M159.3,1.7v76.1h76.1V1.7H159.3z M207.4,28.7c-1.6-1-3.4-1.5-5.3-1.5c-2.1,0-4,1-5.6,2.9
+            c-1.6,1.9-2.5,4.2-2.5,7v22.1h-9.1v-39h9.1v3.7c2.5-2.9,5.9-4.4,10.1-4.4c3.1,0,5.5,0.5,7.1,1.4L207.4,28.7z"/>
+        <path fill="#FFFFFF" d="M246.2,5.8c0,2.3-1.8,4.1-4.1,4.1c-2.3,0-4.1-1.8-4.1-4.1c0-2.3,1.8-4.1,4.1-4.1
+            C244.5,1.7,246.2,3.5,246.2,5.8 M238.7,5.8c0,2,1.5,3.5,3.5,3.5c2,0,3.5-1.6,3.5-3.5c0-2-1.5-3.5-3.5-3.5
+            C240.2,2.3,238.7,3.8,238.7,5.8 M241.2,8.2h-0.6V3.4h1.8c1.1,0,1.5,0.5,1.5,1.3c0,0.8-0.6,1.2-1.2,1.3l1.4,2.1h-0.7L242.2,6h-1
+            V8.2z M242,5.6c0.7,0,1.4,0,1.4-0.8c0-0.7-0.6-0.8-1.1-0.8h-1.1v1.6H242z"/>
+        <g><path fill="#FFFFFF" d="M5.3,1.7v76.1h76.1V1.7H5.3z M60.6,59.2h-9.1V36.7c0-3.3-0.6-5.7-1.9-7.3c-1.3-1.5-3.4-2.3-6.3-2.3
+                c-1.3,0-2.8,0.4-4.3,1.1c-1.5,0.8-2.7,1.7-3.6,2.8v28.1h-9.1v-39H33l1.7,3.6c2.5-2.9,6.1-4.3,11-4.3c4.6,0,8.3,1.4,11,4.2
+                c2.7,2.8,4,6.7,4,11.6V59.2z"/>
+        </g></g></g></svg>
+                        </div>
+                        <div class="overlay">
+                            <h1>NPR</h1>
+                            <i class="icon-right-arrow">right arrow</i>
+                            <p><strong>Lorem ipsum dolor sit amet,</strong> consectetur adipiscing elit. Fusce ultricies commodo sem a laoreet.Aenean sed sagittis mauris. Nunc dignissim sem eget justo adipiscing, vitae tincidunt risus porttitor.</p>
+<!--                             <button class="btn btn-1 btn-1b">Launch All Work.</button>
+ -->                        </div>
+                        <img src="library/img/cs/cs-red.jpg">
                     </li>
                 </a>
 
-                <a href="#" class="case-study animated fadeIn slower">
-                    <div class="overlay-text">
-                        Project Title
-                    </div>
+                <a href="#" class="bmw case-study cs-half animated fadeIn slower">
                     <li>
-                        <div class="overlay"></div>
+                        <div class="overlay-text">
+                            <img style="" src="library/img/bmw-logo.png" />
+                        </div>
+                        <div class="overlay">
+                            <h1>BMW</h1>
+                            <i class="icon-right-arrow">right arrow</i>
+                            <p><strong>Lorem ipsum dolor sit amet,</strong> consectetur adipiscing elit. Fusce ultricies commodo sem a laoreet.Aenean sed sagittis mauris. Nunc dignissim sem eget justo adipiscing, vitae tincidunt risus porttitor.</p>
+<!--                             <button class="btn btn-1 btn-1b">Launch All Work.</button>
+ -->                        </div>
                         <img src="library/img/cs/cs-bmw-large.jpg">
                     </li>
                 </a>
+                <a href="#" class="showtime case-study cs-full animated fadeIn slower">
+                    <li>
+                        <div class="overlay-text">
+                            <svg style="" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            viewBox="0 0 343 122.9" enable-background="new 0 0 343 122.9" xml:space="preserve">
+                            <g><path fill-rule="evenodd" clip-rule="evenodd" fill="#FAFAFA" d="M90.8,62.2c0-23.8,8.5-38.6,18.9-40.3C99.2,9.5,81.9,2.7,66.2,2.7
+                            c-17.3,0-33,7.2-43.9,19.3C32.8,24,36,32.9,36,46.1H23.6c0-8.1-1.6-12.1-6.4-12.1c-2,0-3.6,1.2-4.4,2.8c0,0.4-0.4,0.8-0.4,0.8
+                            c-0.4,1.2-0.8,2.4-0.8,3.6c0,16.1,27,15.3,27,40.7c0,9.7-7.6,18.9-16.1,18.9c11.3,12.1,26.2,19.3,43.9,19.3
+                            c16.9,0,32.2-7.2,43.1-18.9C99.2,98.9,90.8,84.8,90.8,62.2L90.8,62.2z M85.1,100.9H71.5V67.5H57v33.4H43.7V23.6H57V55h14.5V23.6
+                            h13.7V100.9L85.1,100.9z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#FAFAFA" d="M19.1,88.8c3.6,0,6.4-3.6,6.4-8.5c0-9.7-8.9-11.7-18.1-20.1v3.2
+                            C7.8,78.6,13.1,88.8,19.1,88.8L19.1,88.8z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#FAFAFA" d="M104.1,61c0-13.3,3.6-26.2,10.5-26.2C123,34.9,125,55,125,61.4
+                            c0,13.7-4.4,26.6-10.5,26.6C107.7,88,104.1,74.7,104.1,61L104.1,61z"/><polygon fill-rule="evenodd" clip-rule="evenodd" fill="#FAFAFA" points="238.5,24.8 181.8,24.8 176.1,69.1 176.1,69.1 170.1,24.8
+                            157.6,24.8 151.2,69.1 150.8,69.1 145.9,24.8 133.5,24.8 143.5,100.1 155.6,100.1 162.4,52.2 162.8,52.2 169.3,100.1 181.8,100.1
+                            189.8,36.5 201.5,36.5 201.5,100.1 215.2,100.1 215.2,36.5 227.7,36.5 227.7,100.1 241.7,100.1 241.7,24.8 238.5,24.8   "/><polygon fill-rule="evenodd" clip-rule="evenodd" fill="#FAFAFA" points="248.2,24.8 266.7,24.8 272.7,63.5 272.7,63.5 279.2,24.8
+                            297.3,24.8 297.3,100.1 284.8,100.1 284.8,44.9 284.8,44.9 275.6,100.1 267.9,100.1 258.6,44.9 258.2,44.9 258.2,100.1
+                            248.2,100.1 248.2,24.8  "/><polygon fill-rule="evenodd" clip-rule="evenodd" fill="#FAFAFA" points="303.7,24.8 334.7,24.8 334.7,36.5 317.4,36.5 317.4,55.4
+                            330.3,55.4 330.3,67.9 317.4,67.9 317.4,88.4 335.5,88.4 335.5,100.1 303.7,100.1 303.7,24.8   "/></g></svg>
+                        </div>
+                        <div class="overlay">
+                            <h1>Showtime</h1>
+                            <i class="icon-right-arrow">right arrow</i>
+                            <p><strong>Lorem ipsum dolor sit amet,</strong> consectetur adipiscing elit. Fusce ultricies commodo sem a laoreet.Aenean sed sagittis mauris. Nunc dignissim sem eget justo adipiscing, vitae tincidunt risus porttitor.</p><!--                             <button class="btn btn-1 btn-1b">Launch All Work.</button>
+ -->                        </div>
+                         <img src="library/img/showtime.jpg">
+                    </li>
+
+                </a>
 
 
+        </div><!-- case study index -->
 
 
-
-
-
-
-
+        <!-- //*************************************** Full width button section -->
+        <div class="animatedParent animateOnce">
+            <div class="full-button-wrap animated fadeIn slower clearfix">
+                <button style="" class="btn btn-1 btn-1c">Launch All Work.</button>
+            </div>
         </div>
 
 
-
-
-<div class="section image-block clearfix animatedParent animateOnce">
-    <img src="library/img/showtime.jpg" style="width: 100%;" class="animated fadeIn slower" />
-    <div class="full-black-button animated fadeIn slower">
-        <button class="btn btn-1 btn-1b">Launch All Work.</button></div>
-    </div>
-
-<div class="section image-block image-block-border clearfix animatedParent animateOnce">
-    <h2 id="" class="animated fadeIn">Recipe for success.</h2>
-    <span class="icon-down-arrow animated fadeIn slowest" href="">down</span>
-    <img class="animated fadeIn" src="library/img/food-network.jpg" style="width: 100%;" />
-</div>
-
-
+        <!-- //*************************************** Recipe for success -->
+        <div class="section image-block clearfix animatedParent animateOnce">
+            <div class="section image-block image-block-border clearfix animatedParent animateOnce">
+                <h2 id="fittext2" class="animated fadeIn">Recipe for <span>success</span>.</h2>
+                <span class="icon-down-arrow animated fadeIn slowest" href="">down</span>
+                <img class="animated fadeIn" src="library/img/slider-1.jpg" style="width: 100%;" />
+            </div><!-- image-block -->
+        </div><!-- animatedParentParent -->
 
 
         <!-- //*************************************** COPY -->
-
         <div class="section animatedParent animateOnce  copy clearfix">
-
-
             <div class="wrap clearfix animated fadeIn slower">
-
                 <div class="plus red twocol first"></div>
 
                 <div class="eightcol">
 
-                    <h1>Making a mobile experience a brand experience.</h1>
+                    <h1>Mobile is not a movement.</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non tempus nibh, non euismod erat. Etiam sit amet aliquet mauris, quis consectetur dui. Vestibulum risus ipsum, egestas ac pulvinar vel, aliquet nec neque. Duis accumsan varius sollicitudin.</p>
 
                 </div>
@@ -205,36 +330,96 @@
 
 
         <!-- //*************************************** CASE STUDY DETAILS -->
+<div class="animatedParent animateOnce">
 
-        <div class="section animatedParent animateOnce case-study">
+        <div class="section animated fadeIn case-study-details clearfix">
+            <canvas id="stagetwo"></canvas>
+            <div class="desktop-wrap clearfix" style="margin: 0 auto;">
 
+                <div class="phone-wrap clearfix animated fadeInUp mobile ">
+                    <div class="phone-wrap-wrap">
+                        <img class="badge" src="library/img/app-hof.png" />
+                        <img class="phone" src="library/img/phone.png" />
+                    </div>
+                </div><!-- phone -->
+
+                <div class="tablet-wrap clearfix animated fadeInUp mobile">
+                    <img class="tablet" src="library/img/tablet.png" />
+                </div><!-- tablet -->
+            </div>
+
+            <div class="quote animated fadeIn slowest">
+                <h2>&ldquo;All that awesomeness in one place! Easy to navigate and wonderful to use. It's like having a chef in your kitchen.&rdquo;</h2>
+                <p class="rating">★★★★★ on Amazon</p>
+                <p class="user"><strong>Teresa Barnes</strong> | <em>stay at home mom and chef</em></p>
+            </div><!-- quote -->
         </div>
+</div>
 
 
-
-        <!-- //*************************************** SLIDER -->
-
+        <!-- //*************************************** SLIDER 1 -->
         <div class="section animatedParent animateOnce slider image-slider">
-
+            <p class="counter"><strong></strong> / <em></em></p>
             <div class="animated fadeIn slower">
-                <img src="library/img/slider-1.jpg">
+                <img src="library/img/food-network-slide.jpg">
             </div>
 
             <div>
-                <img src="library/img/slider-2.jpg">
+                <img src="library/img/slider-1.jpg">
             </div>
 
         </div>
 
+        <!-- //*************************************** SLIDER 2 -->
+
+        <div class="section animatedParent animateOnce image-slider2 clearfix wrap">
+            <div class="threecol first slide-content-wrap animated fadeIn slow">
+                <h1>Dare to discover new dishes.</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non tempus nibh, non euismod erat. Etiam sit amet aliquet mauris, quis consectetur dui. Lit estibulum risus ipsum.</p>
+            </div>
+            <div class="animated ninecol last fadeIn slower">
+                <div class="slider2">
+                    <div class="slide">
+                        <img src="library/img/mobile-slide1.png">
+                        <div class="caption"><em>Lorem ipsum dolor:</em> Vestibulum non tempus</div>
+                    </div>
+                    <div class="slide">
+                        <img src="library/img/mobile-slide1.png">
+                        <div class="caption"><em>Phasellus viverra semper dignissim:</em>  Nullam volutpat ligula eu</div>
+                    </div>
+                    <div class="slide">
+                        <img src="library/img/mobile-slide1.png">
+                        <div class="caption"><em>Fusce iaculis interdum:</em> Vestibulum non tempus</div>
+                    </div>
+                </div>
+
+            </div><!-- animated container -->
+        </div><!-- section -->
+
+        <!-- //*************************************** Full width button section -->
+        <div class="animatedParent animateOnce">
+            <div class="full-button-wrap nbc animated fadeIn slower clearfix">
+                <button style="" class="btn btn-1 btn-1d">Launch Next Case Study.</button>
+            </div>
+        </div>
+
         <!-- //*************************************** NEWS ARTICLE -->
+        <div class="section wrap animatedParent animateOnce news-article clearfix">
+            <div class="threecol first date-wrap">
+                <p class="date">Aug 11 2014</p>
+            </div>
+            <div class="animated fadeIn slower ninecol last news-copy">
 
-        <div class="section animatedParent animateOnce news-article">
-
-            <div class="wrap animated fadeIn slower">
-
-                    <h1>Introducing the New Bottle Rocket</h1>
+                    <h1>HomeKit's jump toward a connected home.</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non tempus nibh, non euismod erat. Etiam sit amet aliquet mauris, quis consectetur dui. Vestibulum risus ipsum, egestas ac pulvinar vel, aliquet nec neque. Duis accumsan varius sollicitudin. </p>
-                    <div class="button-two">Read More</div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non tempus nibh, non euismod erat. Etiam sit amet aliquet mauris, quis consectetur dui. Vestibulum risus ipsum, egestas ac pulvinar vel, aliquet nec neque. Duis accumsan varius sollicitudin. </p>
+                    <div class="user"><img style="display: inline-block;" src="library/img/helmet-smaller.png" /><strong>Joe Smith</strong> | <em>Creative</em></div>
+                    <ul class="icons-second footer-icons clearfix animatedParent animateOnce ">
+                <li class="animated fadeIn slow icons-second icon icon-facebook icon-facebook-dims"></li>
+                <li class="animated fadeIn slow icons-second icon icon-twitter icon-twitter-dims"></li>
+                <li class="animated fadeIn slow icons-second icon icon-flickr icon-flickr-dims"></li>
+                     </ul>
+                    <button class="btn btn-1 btn-1b animated fadeIn slower">Read More</button>
 
             </div>
 
@@ -246,8 +431,8 @@
 
         <script src="http://code.createjs.com/createjs-2013.12.12.min.js"></script>
         <script src="library/js/global.min.js"></script>
-    <script src="library/js/libs/nav/classie.js"></script>
-    <script src="library/js/libs/nav/borderMenu.js"></script>
+    <!--<script src="library/js/libs/nav/classie.js"></script>
+    <script src="library/js/libs/nav/borderMenu.js"></script>-->
 <script>
 </script>
 

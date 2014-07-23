@@ -1,0 +1,114 @@
+.case-study-details {
+	position: relative;
+	background: url(../img/circles-backup.jpg) repeat scroll 0 0 $red;
+	@include breakpoint($tablet) {
+		background: linear-gradient($darkred, $red, $red);
+	}
+}// details
+.badge {
+	margin: -300px auto 0;
+	@include breakpoint($tablet){
+		margin: -300px auto 0;
+	}// bp
+}
+.phone-wrap {
+	width: 100%;
+	position: relative;
+	z-index: 2;
+	float: left;
+	@include breakpoint($tablet) {
+		width: auto;
+		//width: 45%;
+		}// bp
+}
+.phone-wrap-wrap {
+	margin: 0 auto;
+	@include breakpoint($tablet) {
+		float: right;
+		margin-right: $margin5x;
+	}// bp
+}
+.phone {
+	margin: 0 auto;
+	height: 435px;
+	@include breakpoint($tablet) {
+		height: auto;
+	}
+}// phone
+.tablet-wrap {
+	width: 100%;
+	position: relative;
+	z-index: 2;
+
+	@include breakpoint($tablet){
+		float: right;
+		margin-top: -306px;
+		width: 55%;
+		width: 68.12%;
+		overflow: hidden;
+		}// bp
+	@include breakpoint(1284px) {
+		overflow: visible;
+		float: left;
+	}
+	//float: right;
+}
+.tablet {
+	margin: 0 auto;
+	max-width: 100%;
+
+	@include breakpoint(896px) {
+		height: 435px;
+	}
+	@include breakpoint($tablet) {
+		height: auto;
+		max-width: none;
+	}
+
+}// tablet
+
+.quote {
+	position: relative;
+	z-index: 2;
+	margin-left: 10%;
+	//padding-right: 10%;
+	h2 {
+		font-size: 32px;
+		@include breakpoint($tablet) {
+			font-size: 65px;
+			padding: 0 18%;
+			}// bp
+
+		font-weight: 700;
+		padding: 0 4%;
+		line-height: 1.1;
+		letter-spacing: .05em;
+	}
+	text-align: center;
+	color: $darkred;
+	margin-top: 60px;
+	float: left;
+	.case-study-details & {
+		margin-right: 10%;
+		//margin-left: 0;
+	}
+	@include breakpoint($tablet) {
+		margin-top: 100px;
+		}// bp
+}// quote
+
+.rating {
+	font-weight: 700;
+	font-size: 20px;
+	margin-bottom: 16px;
+
+}
+.user {
+	font-size: 18px;
+	margin-top: 0;
+	margin-bottom: 100px;
+	em {
+		// font-style: normal;
+		// font-weight: normal;
+	}
+}

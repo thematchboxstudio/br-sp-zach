@@ -24,14 +24,16 @@ IMAGE BLOCKS
 		h2 {
 			color: $white;
 
-  position: absolute;
-  margin: auto;
-  left: 40%;
-  top: 50%;
-  transform: translate(-30%, -50%);
-  z-index: 2;
-  transform-origin: 50% 50% 0;
-
+			  // position: absolute;
+			  // margin: auto;
+			  // left: 40%;
+			  // top: 50%;
+			  // transform: translate(-30%, -50%);
+			   z-index: 2;
+			  // transform-origin: 50% 50% 0;
+			  width: 100%;
+			  text-align: center;
+			  margin-top: 21%;
 
 			// top: 0;
 			// bottom: 0;
@@ -48,27 +50,34 @@ IMAGE BLOCKS
 			}
 			font-size: 2rem;
 			@include breakpoint($phone-landscape) {
-				font-size: 3rem;
+				font-size: 2.5rem;
 			}// bp
 			@include breakpoint($tablet) {
-				font-size: 5rem;
+				font-weight: 900;
+				font-size: 6rem;
 			}// bp
 			@include breakpoint($desktop) {
-				font-size: 6rem;
+				font-size: 8rem;
+			}// bp
+			@include breakpoint(2555px) {
+				font-size: 12rem;
 			}// bp
 		}
 		.icon-down-arrow {
 			z-index: 2;
 			position: absolute;
 			display: block;
-			bottom: 6rem;
-			left: 48vw;
+			bottom: 10%;
+			left: 43vw;
 			@include hovers(.25s, ease-in-out);
 			&:hover {
 				cursor: pointer;
 				transform: scale(1.25);
 			}
-		}
+			@include breakpoint($tablet) {
+				left: 48vw;
+			}
+		}// icon-down-arrow
 		img {
 			border: 10px solid $black;
 		}

@@ -8,6 +8,133 @@ SLIDER
 	img{
 		width:100%;
 	}
+	.slick-dots {
+		display: none!important;
+	}
+}
+.counter {
+@include absolute-center;
+font-size: 32px;
+@include breakpoint(768px) {
+	font-size: 100px;
+	}// bp
+@include breakpoint($tablet) { // almost landscape
+	font-size: 120px;
+	}// bp
+@include breakpoint($desktop) {
+	font-size: 12rem;
+}
+color: white;
+font-weight: 900;
+letter-spacing: -.05em;
+em, strong { font-style: normal;}
+}
+.slider2{
+	margin-bottom:0;
+	max-width: 627px;
+	img{
+		max-width:100%;
+	}
+
+}
+.image-slider2 {
+	//background: yellow;
+
+	padding-top: $margin2x;
+	padding-right: $margin2x;
+	padding-bottom: $margin2x;
+	padding-left: $margin2x;
+
+	.slick-dots {
+		display: block;
+		position: relative;
+		text-align: center;
+		margin-top: $margin2x;
+		margin-bottom: $margin;
+		li {
+			width: auto;
+			height: auto;
+			button {
+				width: 9px;
+				height: 9px;
+			}
+			&.slick-active button {
+				width: 33px;
+				height: 33px;
+			}
+		}// li
+
+		li button:before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			content: "";
+			width: 9px;
+			height: 9px;
+			font-family: "slick";
+			font-size: 6px;
+			line-height: 20px;
+			text-align: center;
+			color: black;
+			opacity: 1;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			background: url('../img/circle-off.png') no-repeat scroll 0 0 transparent;
+			}
+		li.slick-active button:before {
+			width: 33px;
+			height: 33px;
+			background: url('../img/circle-on.png') no-repeat scroll 0 0 transparent;
+			}// slick-active button:before
+		@include breakpoint($tablet) {
+			text-align: left;
+			}// bp
+	}// slick-dots
+	@include breakpoint($tablet) {
+		padding-top: $margin6x;
+		padding-bottom: $margin6x;
+		padding-left: $margin3x;
+		margin-bottom: 0;
+		}// bp
+	@include breakpoint(1414px) {
+		padding-left: 0;
+		padding-right: 0;
+	}// bp
+
+}// image-slider2
+
+
+
+
+.slide-content-wrap {
+	@include breakpoint($tablet){
+		padding-top: $margin;
+		margin-top: 93px;
+	}// bp
+
+
+	h1 {
+		font-weight: 700;
+		line-height: .9;
+	}
+	p {
+		font-size: 18px;
+		margin-bottom: 28px;
+	}
+
+}// slide-content-wrap
+.caption {
+	clear: both;
+	text-align: center;
+	margin-top: $margin;
+	//padding-left: 40px;
+
+	@include breakpoint($tablet) {
+		padding-left: 141px;
+		text-align: left;
+		margin-top: 0;
+	}// bp
+	//text-align: center;
 }
 
 .slick-dots{
@@ -17,7 +144,7 @@ SLIDER
 }
 
 .slick-next, .slick-prev {
-	top: 45%;
+	//top: 25%;
 	opacity: 1;
 	@include hovers;
 	&:before {
@@ -29,20 +156,101 @@ SLIDER
 	&.slick-disabled {
 		opacity: 0;
 	}
-}
+
+	.slider2 & {
+		top: 25%;
+		@include breakpoint($tablet) {
+			top: 45%;
+		}// bp
+	}
+	// @include breakpoint(401px) {
+	// 	top: 30%;
+	// }
+	// @include breakpoint($tablet-portrait){
+	// 	top: 40%;
+	// }
+	// @include breakpoint($tablet) {
+	// 	top: 41%;
+	// 	}// bp
+	// @include breakpoint(1275px) {
+	// 	top: 43%;
+	// 	}// bp
+	// @include breakpoint(2500px) {
+	// 	top: 48%;
+	// 	}// bp
+	  position: absolute;
+  	margin: auto;
+  top: 50%;
+  transform: translate(0, -50%);
+  z-index: 2;
+  transform-origin: 50% 50% 0;
+
+}// slick-next slick-prev
 
 .slick-prev{
 	left:0;
-	transform: rotate(180deg);
+	transform: translate(0, -50%) rotate(180deg) scale(.75);
 
 	.image-slider & {
 		left: 10%;
+		@include breakpoint($tablet-portrait) {
+			left: 15%;
+		}
 	}
-}
+	.slider2 & {
+		left: -2px;
+		transform: rotate(180deg) scale(.5);
+		@include breakpoint($phone-landscape) {
+			//transform: rotate(180deg) scale(.75);
+
+		}
+		@include breakpoint($tablet) {
+			left: 8px;
+			transform: rotate(180deg) scale(1);
+			}// bp
+		@include breakpoint($desktop) {
+			left: 0;
+		}
+	}// slider2
+	@include breakpoint($tablet) {
+		transform: translate(0, -50%) rotate(180deg);
+		}// bp
+}// slick-prev
 
 .slick-next{
 	right:0;
+	transform: translate(0, -50%) scale(.75);
 	.image-slider & {
 		right: 10%;
+		@include breakpoint($tablet-portrait) {
+			right: 15%;
+		}
 	}
+	.slider2 & {
+		right: -6px;
+		transform: scale(.5);
+		@include breakpoint($tablet) {
+			right: 12px;
+			transform: scale(1);
+		}// bp
+		@include breakpoint($desktop) {
+			right: 0;
+		}
+	}// slider 2
+	@include breakpoint($tablet) {
+		transform: translate(0, -50%) scale(1);
+		}// bp
+}// slick-next
+
+
+.slider .slick-dots li button {
+color: #000!important;
+font-size: 22px!important;
+	&:first-child:after {
+		//content: '/';
+	}
+}
+.slider .slick-dots li button:before {
+display: none!important;
+
 }

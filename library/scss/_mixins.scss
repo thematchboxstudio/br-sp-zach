@@ -43,6 +43,7 @@ $text-color: #999;
 $red: #dd191d;
 $darkred: #a00000;
 
+$grey: #303030;
 $redhover: darken(#a00000, 10%);
 
 
@@ -74,6 +75,9 @@ $marginquarter: (.25 * $margin);
 $margin2x: (2 * $margin);
 $margin3x: (3 * $margin);
 $margin4x: (4 * $margin);
+$margin5x: (5 * $margin);
+$margin6x: (6 * $margin);
+$margin7x: (7 * $margin);
 
 
 // SECTION HEIGHTS
@@ -85,6 +89,7 @@ BREAKPOINTS
 *********************/
 $phone: 1em;
 $phone-landscape: 25em;
+$tablet-portrait: 768px;
 $tablet: 56em;
 $desktop: 71em;
 
@@ -101,9 +106,18 @@ $serif:             "Georgia", Cambria, Times New Roman, Times, serif;
 @mixin absolute-center($z-index: 2) {
   position: absolute;
   margin: auto;
-  left: 40%;
+  left: 50%;
   top: 50%;
-  transform: translate(-30%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: $z-index;
+  transform-origin: 50% 50% 0;
+}
+@mixin vertical-center($z-index: 2) {
+  position: absolute;
+  margin: auto;
+  //left: 50%;
+  top: 50%;
+  transform: translate(0, -50%)!important;
   z-index: $z-index;
   transform-origin: 50% 50% 0;
 }
@@ -282,6 +296,9 @@ $duration-slowest: 1s;
 		@for $i from 1 through 50 {
 	   &.icon:nth-of-type(#{$i}) {
 	   		animation-delay: (#{$i*0.125s});
+	   }
+	   &.mobile:nth-of-type(#{$i}) {
+	   		animation-delay: (#{$i*0.25s});
 	   }
 	}
 }

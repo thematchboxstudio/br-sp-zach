@@ -1,6 +1,6 @@
 /mb-build/
 /node_modules/
-
+/library/src/
 /.sass-cache/
 
 *.sublime-project
