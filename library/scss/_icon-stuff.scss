@@ -19,7 +19,7 @@ ICON SECTION STYLES
 	//background: $red;
 	padding: 5em 0;
 	z-index: 2;
-	@include breakpoint($tablet) {
+		@include breakpoint($tablet-portrait) {
 	    width: 100%;
 	    padding: 0;
 
@@ -32,7 +32,7 @@ ICON SECTION STYLES
 		z-index: 22;
 		width: 100%;
 		text-align: center;
-		@include breakpoint($tablet) {
+		@include breakpoint($tablet-portrait) {
 			//display: table-cell;
 			//vertical-align: middle;
 
@@ -51,7 +51,7 @@ ICON SECTION STYLES
 		margin: 0 auto;
 		text-align: center;
 		margin-bottom: 1.25em;
-		@include breakpoint($tablet) {
+		@include breakpoint($tablet-portrait) {
 		    display: inline-block;
 		    margin: 0 2%;
 	   		vertical-align: middle;
@@ -68,10 +68,14 @@ ICON SECTION STYLES
 .footer-icons {
 	width: 100%;
 	text-align: center;
-	@include breakpoint($tablet) {
-		text-align: right;
+	@include breakpoint(768px) {
+		//margin-top: $margin2x;
 		float: right;
+		text-align: right;
 		width: 300px;
+
+	}
+	@include breakpoint($tablet) {
 	}
 	// 	ul {
 	// 	text-align: center;

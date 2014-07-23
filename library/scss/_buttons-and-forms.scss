@@ -337,6 +337,12 @@ BUTTONS AND FORMS
   	opacity: 1;
 	color: $text-color;
 	font-size: 20px;
+	@include breakpoint($tablet-portrait) {
+		text-indent: 90%;
+	}
+		@include breakpoint($tablet) {
+		text-indent: 80%;
+	}
 	@include breakpoint(1350px){
   		text-indent: 85%;
   		}

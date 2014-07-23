@@ -35,8 +35,8 @@ NEWS
 		@include breakpoint($tablet) {
 			width: 58%;
 			float: left;
+			padding-right: $margin;
 		}// bp
-		padding-right: $margin;
 		button {
 			display: block;
 			clear: both;

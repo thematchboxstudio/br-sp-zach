@@ -108,7 +108,7 @@ $( "a, form button" ).click(function( event ) {
 	 	autoplay: false,
 	 	dots: true,
 	 	arrows: true,
-	 	infinite: true,
+	 	infinite: false,
 
 	});
 	 $('.slider .slick-next').on('click', function(){

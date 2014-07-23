@@ -24,8 +24,13 @@
 .phone-wrap-wrap {
 	margin: 0 auto;
 	@include breakpoint($tablet) {
+		margin-right: 0;
+		margin-left: 2rem;
+	}
+	@include breakpoint($desktop) {
 		float: right;
 		margin-right: $margin5x;
+		margin-left: 0;
 	}// bp
 }
 .phone {
@@ -74,11 +79,17 @@
 	//padding-right: 10%;
 	h2 {
 		font-size: 32px;
+		@include breakpoint($tablet-portrait){
+			padding: 0 10%;
+		}
 		@include breakpoint($tablet) {
 			font-size: 65px;
-			padding: 0 18%;
+			padding: 0 0;
 			}// bp
+		@include breakpoint(2000px) {
+			padding: 0 25%;
 
+		}
 		font-weight: 700;
 		padding: 0 4%;
 		line-height: 1.1;

@@ -41,7 +41,7 @@ CASE STUDY INDEX
 
 .overlay{
 	display: none;
-	@include breakpoint($tablet) {
+	@include breakpoint($desktop) {
 	display: block;
     position: absolute;
     width:100%;
@@ -107,7 +107,7 @@ CASE STUDY INDEX
 .case-study {
 	&.cs-full {
 		width: 100%;
-		@include breakpoint($tablet) {
+		@include breakpoint($tablet-portrait) {
 			width: 50%;
 		}
 		@include breakpoint($desktop) {
@@ -116,7 +116,7 @@ CASE STUDY INDEX
 	}
 	&.cs-half {
 		width: 100%;
-		@include breakpoint($tablet) {
+		@include breakpoint($tablet-portrait) {
 			width: 50%;
 		}
 	}
@@ -127,7 +127,7 @@ CASE STUDY INDEX
 		width: 244px; height: 137px;
 		transform: scale(.6);
 		margin-top: 30px;
-		@include breakpoint($tablet) {
+		@include breakpoint($tablet-portrait) {
 			margin-top: 51px;
 			//margin-top: -14px;
 			//transform: scale(1);
@@ -142,7 +142,7 @@ CASE STUDY INDEX
 		width: 175px;
 		display: inline-block;
 		transform: scale(.9);
-		@include breakpoint($tablet) {
+		@include breakpoint($tablet-portrait) {
 			margin-top: 80px;
 		}
 		@include breakpoint($desktop) {
@@ -155,7 +155,7 @@ CASE STUDY INDEX
 		width: 122px;
 		height: 98px;
 		transform: scale(.9);
-		@include breakpoint($tablet) {
+		@include breakpoint($tablet-portrait) {
 			margin-top: 62px;
 		}
 		@include breakpoint($desktop) {
@@ -167,7 +167,7 @@ CASE STUDY INDEX
 		width: 175px;
 		margin-top: 50px;
 		display: inline-block;
-		@include breakpoint($tablet) {
+		@include breakpoint($tablet-portrait) {
 			margin-top: 82px;
 		}
 		@include breakpoint($desktop) {
@@ -178,7 +178,7 @@ CASE STUDY INDEX
 		width: 127px;
 		height: 127px;
 		margin-top: 35px;
-		@include breakpoint($tablet) {
+		@include breakpoint($tablet-portrait) {
 			margin-top: 57px;
 		}
 		@include breakpoint($desktop){
@@ -190,7 +190,7 @@ CASE STUDY INDEX
 		height: 80px;
 		transform: scale(.6);
 		margin-top: 55px;
-		@include breakpoint($tablet) {
+		@include breakpoint($tablet-portrait) {
 			margin-top: 72px;
 		}
 		@include breakpoint($desktop) {
@@ -203,7 +203,7 @@ CASE STUDY INDEX
 		transform: scale(.6);
 		margin-top: -15px;
 		display: inline-block;
-		@include breakpoint($tablet) {
+		@include breakpoint($tablet-portrait) {
 			margin-top: 12px;
 		}
 		@include breakpoint($desktop) {
@@ -216,7 +216,7 @@ CASE STUDY INDEX
 		height: 123px;
 		transform: scale(.6);
 		margin-top: 30px;
-		@include breakpoint($tablet) {
+		@include breakpoint($tablet-portrait) {
 			margin-top: 55px;
 		}
 		@include breakpoint($desktop) {
@@ -308,7 +308,7 @@ CASE STUDY INDEX
 	margin: 0;
 	padding: 0;
 	float: none;
-	@include breakpoint($tablet) {
+		@include breakpoint($tablet-portrait) {
 		width: 50%;
 		float: right;
 	}

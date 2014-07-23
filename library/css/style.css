@@ -1500,7 +1500,7 @@ h5, .h5 {
 }
 
 .feature-header {
-  background: url("../img/spaceman-slide.jpg") no-repeat scroll left top black;
+  background: url("../img/spaceman-slide.jpg") no-repeat scroll left top #dd191d;
   width: 100%;
   height: 100%;
   background-size: cover;
@@ -1542,7 +1542,7 @@ h5, .h5 {
   position: absolute;
   margin: auto;
   top: 40%;
-  left: 10%;
+  left: 7%;
   z-index: 2;
   line-height: 1;
 }
@@ -1556,7 +1556,7 @@ h5, .h5 {
   .feature-header h2 {
     font-size: 8rem;
     font-weight: 900;
-    line-height: .8;
+    line-height: .9;
     right: auto;
     left: 50%;
     top: 26%;
@@ -1871,6 +1871,16 @@ BUTTONS AND FORMS
   opacity: 1;
   color: #999999;
   font-size: 20px;
+}
+@media (min-width: 768px), (min-width: 768px) {
+  .name-form:focus::-webkit-input-placeholder {
+    text-indent: 90%;
+  }
+}
+@media (min-width: 56em), (min-width: 56em) {
+  .name-form:focus::-webkit-input-placeholder {
+    text-indent: 80%;
+  }
 }
 @media (min-width: 1350px), (min-width: 1350px) {
   .name-form:focus::-webkit-input-placeholder {
@@ -2335,7 +2345,7 @@ CASE STUDY INDEX
 .overlay {
   display: none;
 }
-@media (min-width: 56em), (min-width: 56em) {
+@media (min-width: 71em), (min-width: 71em) {
   .overlay {
     display: block;
     position: absolute;
@@ -2396,7 +2406,7 @@ CASE STUDY INDEX
 .case-study.cs-full {
   width: 100%;
 }
-@media (min-width: 56em), (min-width: 56em) {
+@media (min-width: 768px), (min-width: 768px) {
   .case-study.cs-full {
     width: 50%;
   }
@@ -2409,7 +2419,7 @@ CASE STUDY INDEX
 .case-study.cs-half {
   width: 100%;
 }
-@media (min-width: 56em), (min-width: 56em) {
+@media (min-width: 768px), (min-width: 768px) {
   .case-study.cs-half {
     width: 50%;
   }
@@ -2422,7 +2432,7 @@ CASE STUDY INDEX
           transform: scale(0.6);
   margin-top: 30px;
 }
-@media (min-width: 56em), (min-width: 56em) {
+@media (min-width: 768px), (min-width: 768px) {
   .case-study.nbc svg {
     margin-top: 51px;
   }
@@ -2443,7 +2453,7 @@ CASE STUDY INDEX
       -ms-transform: scale(0.9);
           transform: scale(0.9);
 }
-@media (min-width: 56em), (min-width: 56em) {
+@media (min-width: 768px), (min-width: 768px) {
   .case-study.syfy .overlay-text img {
     margin-top: 80px;
   }
@@ -2464,7 +2474,7 @@ CASE STUDY INDEX
       -ms-transform: scale(0.9);
           transform: scale(0.9);
 }
-@media (min-width: 56em), (min-width: 56em) {
+@media (min-width: 768px), (min-width: 768px) {
   .case-study.history svg {
     margin-top: 62px;
   }
@@ -2482,7 +2492,7 @@ CASE STUDY INDEX
   margin-top: 50px;
   display: inline-block;
 }
-@media (min-width: 56em), (min-width: 56em) {
+@media (min-width: 768px), (min-width: 768px) {
   .case-study.travel .overlay-text img {
     margin-top: 82px;
   }
@@ -2497,7 +2507,7 @@ CASE STUDY INDEX
   height: 127px;
   margin-top: 35px;
 }
-@media (min-width: 56em), (min-width: 56em) {
+@media (min-width: 768px), (min-width: 768px) {
   .case-study.food svg {
     margin-top: 57px;
   }
@@ -2515,7 +2525,7 @@ CASE STUDY INDEX
           transform: scale(0.6);
   margin-top: 55px;
 }
-@media (min-width: 56em), (min-width: 56em) {
+@media (min-width: 768px), (min-width: 768px) {
   .case-study.npr svg {
     margin-top: 72px;
   }
@@ -2536,7 +2546,7 @@ CASE STUDY INDEX
   margin-top: -15px;
   display: inline-block;
 }
-@media (min-width: 56em), (min-width: 56em) {
+@media (min-width: 768px), (min-width: 768px) {
   .case-study.bmw .overlay-text img {
     margin-top: 12px;
   }
@@ -2557,7 +2567,7 @@ CASE STUDY INDEX
           transform: scale(0.6);
   margin-top: 30px;
 }
-@media (min-width: 56em), (min-width: 56em) {
+@media (min-width: 768px), (min-width: 768px) {
   .case-study.showtime svg {
     margin-top: 55px;
   }
@@ -2639,7 +2649,7 @@ CASE STUDY INDEX
   padding: 0;
   float: none;
 }
-@media (min-width: 56em), (min-width: 56em) {
+@media (min-width: 768px), (min-width: 768px) {
   .case-studies {
     width: 50%;
     float: right;
@@ -2718,8 +2728,15 @@ CASE STUDY INDEX
 }
 @media (min-width: 56em), (min-width: 56em) {
   .phone-wrap-wrap {
+    margin-right: 0;
+    margin-left: 2rem;
+  }
+}
+@media (min-width: 71em), (min-width: 71em) {
+  .phone-wrap-wrap {
     float: right;
     margin-right: 5rem;
+    margin-left: 0;
   }
 }
 
@@ -2786,10 +2803,20 @@ CASE STUDY INDEX
   line-height: 1.1;
   letter-spacing: .05em;
 }
+@media (min-width: 768px), (min-width: 768px) {
+  .quote h2 {
+    padding: 0 10%;
+  }
+}
 @media (min-width: 56em), (min-width: 56em) {
   .quote h2 {
     font-size: 65px;
-    padding: 0 18%;
+    padding: 0 0;
+  }
+}
+@media (min-width: 2000px), (min-width: 2000px) {
+  .quote h2 {
+    padding: 0 25%;
   }
 }
 .case-study-details .quote {
@@ -2844,13 +2871,11 @@ NEWS
     margin-top: 0;
   }
 }
-.news-article .news-copy {
-  padding-right: 1rem;
-}
 @media (min-width: 56em), (min-width: 56em) {
   .news-article .news-copy {
     width: 58%;
     float: left;
+    padding-right: 1rem;
   }
 }
 .news-article .news-copy button {
@@ -3139,7 +3164,7 @@ ICON SECTION STYLES
   padding: 5em 0;
   z-index: 2;
 }
-@media (min-width: 56em), (min-width: 56em) {
+@media (min-width: 768px), (min-width: 768px) {
   .icons {
     width: 100%;
     padding: 0;
@@ -3151,7 +3176,7 @@ ICON SECTION STYLES
   width: 100%;
   text-align: center;
 }
-@media (min-width: 56em), (min-width: 56em) {
+@media (min-width: 768px), (min-width: 768px) {
   .icons ul {
     text-align: center;
   }
@@ -3168,7 +3193,7 @@ ICON SECTION STYLES
   text-align: center;
   margin-bottom: 1.25em;
 }
-@media (min-width: 56em), (min-width: 56em) {
+@media (min-width: 768px), (min-width: 768px) {
   .icons li {
     display: inline-block;
     margin: 0 2%;
@@ -3182,10 +3207,10 @@ ICON SECTION STYLES
   width: 100%;
   text-align: center;
 }
-@media (min-width: 56em), (min-width: 56em) {
+@media (min-width: 768px), (min-width: 768px) {
   .footer-icons {
-    text-align: right;
     float: right;
+    text-align: right;
     width: 300px;
   }
 }
